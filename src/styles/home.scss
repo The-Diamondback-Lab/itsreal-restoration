@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+#home-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  z-index: -1;
+
+  background: url('../assets/mobile-bg.jpg') top center;
+
+  font-family: 'Lora', serif;
+}
+
+#home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+
+  width: 90%;
+  height: 100%;
+
+  font-size: 2em;
+
+  img.banner {
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+    color: rgb(54, 54, 54);
+  }
+}

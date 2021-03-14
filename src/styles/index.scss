@@ -1,5 +1,20 @@
-$main-color : red;
+@import './utils.scss';
+@import './home.scss';
+
+html, body, #root {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
 
 body {
-  color: $main-color;
+  font-size: 12px;
 }
+
+/*
+@media screen and (max-width: $tablet-width) {
+  body {
+    font-size: 30px;
+  }
+}
+*/

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import mobileBanner from '../assets/mobile-banner.png';
+import mobileBanner from '../../assets/mobile-banner.png';
+import NavigationElements from '../components/NavigationElements';
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
         <img className="banner" src={mobileBanner} alt="&quot;It's Real&quot; Banner"></img>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
           rutrum urna, in semper purus.</p>
+        <NavigationElements />
       </div>
     </React.Fragment>
   );

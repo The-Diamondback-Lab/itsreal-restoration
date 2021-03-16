@@ -2,12 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
 
 /* Width of the home container when in laptop view */
-$hc-width-laptop: 85%;
+$hc-width-laptop: 80%;
+$hc-height-laptop: 75%;
+
 /* Horizontal padding of home container when in laptop view; calculated based
 off $hc-width-laptop in order to show the entire background picture */
-$hc-padding-laptop: (100% - $hc-width-laptop) / 2;
+// $hc-horz-padding-laptop: (100% - $hc-width-laptop) / 2;
+// $hc-vert-padding-laptop: (100% - $hc-height-laptop) / 2;
 
 #home-container {
   width: 100%;
@@ -16,6 +20,11 @@ $hc-padding-laptop: (100% - $hc-width-laptop) / 2;
   padding: 0;
 
   background: url('../assets/mobile-bg.jpg') no-repeat top center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #home-content {
@@ -34,6 +43,10 @@ $hc-padding-laptop: (100% - $hc-width-laptop) / 2;
 
   img.mobile-banner {
     width: 100%;
+  }
+
+  h1 {
+    display: none;
   }
 
   p {
@@ -64,21 +77,49 @@ $hc-padding-laptop: (100% - $hc-width-laptop) / 2;
   }
 }
 
-/*
 @media screen and (min-width: $laptop-width) {
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   #home-container {
     background: url('../assets/watercolor-black-bg.jpg') no-repeat center;
+
+    margin: 0 auto;
+
+    max-width: $laptop-width;
+    max-height: 600px;
   }
 
   #home-content {
     max-width: $laptop-width;
     width: $hc-width-laptop;
-    padding: 0 $hc-padding-laptop;
+    height: $hc-height-laptop;
+
+    border: 1px solid white;
 
     color: white;
 
     img.mobile-banner {
       display: none;
+    }
+
+    p {
+      margin-left: 5em;
+      margin-right: 5em;
+    }
+
+    h1 {
+      display: initial;
+
+      margin: 0;
+
+      font-family: 'Playfair Display SC', serif;
+      font-size: 12.5em;
+      letter-spacing: 0;
+      text-transform: uppercase;
     }
 
     #navigation-elems {
@@ -99,4 +140,3 @@ $hc-padding-laptop: (100% - $hc-width-laptop) / 2;
     }
   }
 }
-*/

@@ -4,7 +4,6 @@ import '../../styles/home.scss';
 import NavigationElements from '../components/NavigationElements';
 
 import mobileBanner from '../../assets/mobile-banner.png';
-import mainBackground from '../../assets/watercolor-black-bg.jpg';
 
 function Home() {
   return (

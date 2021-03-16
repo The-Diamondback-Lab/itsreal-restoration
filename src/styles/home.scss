@@ -4,15 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
 
-/* Width of the home container when in laptop view */
-$hc-width-laptop: 80%;
-$hc-height-laptop: 75%;
-
-/* Horizontal padding of home container when in laptop view; calculated based
-off $hc-width-laptop in order to show the entire background picture */
-// $hc-horz-padding-laptop: (100% - $hc-width-laptop) / 2;
-// $hc-vert-padding-laptop: (100% - $hc-height-laptop) / 2;
-
 #home-container {
   width: 100%;
   height: 100%;
@@ -95,8 +86,8 @@ off $hc-width-laptop in order to show the entire background picture */
 
   #home-content {
     max-width: $laptop-width;
-    width: $hc-width-laptop;
-    height: $hc-height-laptop;
+    width: 80%;
+    height: 75%;
 
     border: 1px solid white;
 

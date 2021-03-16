@@ -1,19 +1,21 @@
 import React from 'react';
 
-import mobileBanner from '../../assets/mobile-banner.png';
+import '../../styles/home.scss';
 import NavigationElements from '../components/NavigationElements';
+
+import mobileBanner from '../../assets/mobile-banner.png';
+import mainBackground from '../../assets/watercolor-black-bg.jpg';
 
 function Home() {
   return (
-    <React.Fragment>
-      <div id="home-bg" />
-      <div id="home-container">
-        <img className="banner" src={mobileBanner} alt="&quot;It's Real&quot; Banner"></img>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
-          rutrum urna, in semper purus.</p>
+    <div id="home-container">
+      <div id="home-content">
+        <img className="mobile-banner" src={mobileBanner} alt="&quot;It's Real&quot; Banner"></img>
+        <p>A seven-part look at how sexual assault is handled at the University
+          of Maryland.</p>
         <NavigationElements />
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 

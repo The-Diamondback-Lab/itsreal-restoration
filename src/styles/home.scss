@@ -1,20 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import './utils.scss';
 
-#home-bg {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* Width of the home container when in laptop view */
+$hc-width-laptop: 85%;
+/* Horizontal padding of home container when in laptop view; calculated based
+off $hc-width-laptop in order to show the entire background picture */
+$hc-padding-laptop: (100% - $hc-width-laptop) / 2;
+
+#home-container {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 
-  z-index: -1;
-
-  background: url('../assets/mobile-bg.jpg') top center;
-
-  font-family: 'Lora', serif;
+  background: url('../assets/mobile-bg.jpg') no-repeat top center;
 }
 
-#home-container {
+#home-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,30 +30,73 @@
   max-width: 400px;
   height: 100%;
 
-  font-size: 2em;
+  color: rgb(54, 54, 54);
 
-  img.banner {
+  img.mobile-banner {
     width: 100%;
   }
 
   p {
     text-align: center;
-    color: rgb(54, 54, 54);
+    font-family: 'Lora', serif;
+    font-size: 2em;
+    line-height: 1.5em;
   }
 
   #navigation-elems {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
 
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 5px;
+    padding: 0.25em;
 
     a {
       color: white;
       text-decoration: none;
-      padding: 2px;
-      margin: 5px 7.5px;
+      padding: 0.05em 0.15em;
+      margin: 5px;
     }
   }
 }
+
+/*
+@media screen and (min-width: $laptop-width) {
+  #home-container {
+    background: url('../assets/watercolor-black-bg.jpg') no-repeat center;
+  }
+
+  #home-content {
+    max-width: $laptop-width;
+    width: $hc-width-laptop;
+    padding: 0 $hc-padding-laptop;
+
+    color: white;
+
+    img.mobile-banner {
+      display: none;
+    }
+
+    #navigation-elems {
+      font-size: 3em;
+      background: none;
+
+      a {
+        padding: 0.5em 1.15em;
+        padding-bottom: 0.5em;
+        margin: 0;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0);
+      }
+
+      a:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}
+*/

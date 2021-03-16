@@ -8,13 +8,8 @@ html, body, #root {
 }
 
 body {
-  font-size: 12px;
+  font-size: 11px;
 }
 
-/*
-@media screen and (max-width: $tablet-width) {
-  body {
-    font-size: 30px;
-  }
+@media screen and (min-width: $laptop-width) {
 }
-*/

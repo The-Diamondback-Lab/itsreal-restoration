@@ -83,10 +83,12 @@ $initial-dot-margin: 10px;
 @keyframes fadeOut {
   0% {
     opacity: 1;
+    visibility: initial;
   }
 
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 

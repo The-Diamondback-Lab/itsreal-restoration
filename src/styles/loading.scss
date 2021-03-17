@@ -77,3 +77,19 @@ $initial-dot-margin: 10px;
     animation-delay: .4s;
   }
 }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#loading-logo.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 1500ms;
+  transition-timing-function: ease-in-out;
+}

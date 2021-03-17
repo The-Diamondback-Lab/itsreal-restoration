@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import LoadingLogo from '../components/LoadingLogo';
 
@@ -25,4 +26,9 @@ export default class BasePage extends React.Component {
       </React.Fragment>
     )
   }
+}
+
+BasePage.propTypes = {
+  /** An instantiated page component */
+  pageComponent: PropTypes.element.isRequired
 }

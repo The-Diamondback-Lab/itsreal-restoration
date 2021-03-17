@@ -15,5 +15,10 @@ body {
   font-size: 11px;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 @media screen and (min-width: $laptop-width) {
 }

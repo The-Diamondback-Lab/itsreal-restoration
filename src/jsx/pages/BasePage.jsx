@@ -8,27 +8,39 @@ export default class BasePage extends React.Component {
     super(props);
 
     this.state = {
+      /** Whether or not the component is loading */
       loading: true
     };
+
+    this.ready = this.ready.bind(this);
   }
 
-  componentDidMount() {
+  /**
+   * Used to indicate that the component has finished loading.
+   */
+  ready() {
     this.setState({
       loading: false
     });
   }
 
   render() {
+    let pageElement = React.createElement(this.props.pageComponent, {
+      ...this.props.pageProps,
+      onReady: this.ready
+    });
     return (
       <React.Fragment>
         <LoadingLogo loading={this.state.loading} />
-        {this.props.pageComponent}
+        {pageElement}
       </React.Fragment>
     )
   }
 }
 
 BasePage.propTypes = {
-  /** An instantiated page component */
-  pageComponent: PropTypes.element.isRequired
+  /** The page component type to load in */
+  pageComponent: PropTypes.elementType.isRequired,
+  /** Props passed to the page component */
+  pageProps: PropTypes.any
 }

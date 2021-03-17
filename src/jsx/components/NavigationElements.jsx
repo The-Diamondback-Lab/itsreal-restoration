@@ -9,7 +9,7 @@ import React from 'react';
  * modified.
  * @returns a `div` element whose children are anchor tags `a`
  */
-function NavigationElements() {
+export default function NavigationElements() {
   // Text used for the anchor tags
   let anchorText = [ 'I.', 'II.', 'III.', 'IV.', 'V.', 'VI.', 'VII.' ];
   // Links for the anchor tags (this should be a parallel-array with anchorText)
@@ -29,5 +29,3 @@ function NavigationElements() {
     </div>
   );
 }
-
-export default NavigationElements;

@@ -6,7 +6,7 @@ import NavigationElements from '../components/NavigationElements';
 import mobileBanner from '../../assets/mobile-banner.png';
 import specialProjectBanner from '../../assets/special-project-banner.png';
 
-function Home() {
+export default function Home() {
   return (
     <div id="home-container">
       <img className="special-projects-banner" src={specialProjectBanner} alt="Special Project Logo"></img>
@@ -20,5 +20,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

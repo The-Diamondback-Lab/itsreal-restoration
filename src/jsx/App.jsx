@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Test from "./pages/Test";
 import Article from './pages/Article';
 
 import tocData from '../data/toc.json';
@@ -24,9 +23,6 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
-          <Route exact path="/test">
-            <Test />
           </Route>
           {articleRoutes}
         </Switch>

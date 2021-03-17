@@ -21,7 +21,7 @@ function NavigationElements() {
   return (
     <div id="navigation-elems">
       {links.map((link, i) =>
-        <a href={'/' + link} target="_blank" rel="noreferrer">{anchorText[i]}</a>
+        <a href={'/' + link} key={`nav-part-${i}`} target="_blank" rel="noreferrer">{anchorText[i]}</a>
       )}
     </div>
   );

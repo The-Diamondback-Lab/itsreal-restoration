@@ -1,0 +1,79 @@
+// Modified from Martin Wolf
+// https://martinwolf.org/before-2018/blog/2015/01/pure-css-savingloading-dots-animation/
+
+$initial-dot-size: 10px;
+$midway-dot-size: 15px;
+$dot-size-diff: $midway-dot-size - $initial-dot-size;
+
+$initial-dot-margin: 10px;
+
+@mixin start-transition-styles() {
+  opacity: .2;
+  width: $initial-dot-size;
+  height: $initial-dot-size;
+  margin: $initial-dot-margin;
+}
+
+@mixin midway-transition-styles() {
+  opacity: 1;
+  width: $midway-dot-size;
+  height: $midway-dot-size;
+  margin: $initial-dot-margin - (($dot-size-diff) / 2);
+}
+
+@keyframes blink {
+  0% {
+    @include start-transition-styles();
+  }
+
+  20% {
+    @include midway-transition-styles();
+  }
+
+  100% {
+    @include start-transition-styles();
+  }
+}
+
+#loading-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+  font-size: 10em;
+  background-color: white;
+
+  img {
+    width: 200px;
+  }
+
+  .loading-dots {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .loading-dots div {
+    margin: 0;
+    padding: 0;
+
+    background-color: red;
+    border-radius: 50%;
+
+    animation-name: blink;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    transition-timing-function: ease-in-out;
+  }
+
+  .loading-dots div:nth-child(2) {
+    animation-delay: .2s;
+  }
+
+  .loading-dots div:nth-child(3) {
+    animation-delay: .4s;
+  }
+}

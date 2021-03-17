@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Article from './pages/Article';
 
 import tocData from '../data/toc.json';
+import LoadingLogo from "./components/LoadingLogo";
 
 export default function App() {
   // Mapping each part in table of contents to a Route object
@@ -23,6 +24,9 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/loading">
+            <LoadingLogo />
           </Route>
           {articleRoutes}
         </Switch>

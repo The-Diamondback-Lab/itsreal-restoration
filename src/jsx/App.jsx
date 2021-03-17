@@ -27,7 +27,7 @@ export default function App() {
             <BasePage pageComponent={<Home />} />
           </Route>
           <Route exact path="/loading">
-            <LoadingLogo />
+            <LoadingLogo loading={true} />
           </Route>
           {articleRoutes}
         </Switch>

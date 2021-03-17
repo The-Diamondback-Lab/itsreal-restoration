@@ -1,10 +1,19 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
  * @param {ArticlePropTypes} props
  */
-export default function Article(props) {
-  return <div>{props.part}</div>;
+export default class Article extends React.Component {
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.onReady();
+    }, 2000);
+  }
+
+  render() {
+    return (<div>{this.props.part}</div>);
+  }
 }
 
 Article.propTypes = {

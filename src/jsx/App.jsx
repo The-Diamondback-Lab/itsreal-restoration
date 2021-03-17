@@ -14,11 +14,22 @@ import BasePage from "./pages/BasePage";
 
 export default function App() {
   // Mapping each part in table of contents to a Route object
-  let articleRoutes = tocData.map((x, i) => (
-    <Route exact path={'/' + x.path} key={`route-part-${i+1}`}>
-      <BasePage pageComponent={<Article part={x.path} hasTimeline={x.hasTimeline}/>} />
-    </Route>
-  ));
+  let articleRoutes = tocData.map((x, i) => {
+    let articleProps = {
+      part: x.path,
+      hasTimeline: x.hasTimeline
+    };
+
+    let basePage = (<BasePage
+      pageComponent={Article}
+      pageProps={articleProps} />);
+
+    return (
+      <Router exact path={'/' + x.path} key={`route-part-${i+1}`}>
+        {basePage}
+      </Router>
+    );
+  });
 
   return (
     <Router>

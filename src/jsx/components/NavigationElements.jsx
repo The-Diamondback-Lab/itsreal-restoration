@@ -12,8 +12,6 @@ import tocData from '../../data/toc.json';
  * @returns a `div` element whose children are anchor tags `a`
  */
 export default function NavigationElements() {
-  console.log(tocData);
-
   return (
     <div id="navigation-elems">
       {tocData.map((data, i) =>

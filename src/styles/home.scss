@@ -16,10 +16,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-img.special-projects-banner {
-  display: none;
+  img.special-projects-banner {
+    display: none;
+  }
 }
 
 #home-content {
@@ -86,14 +86,14 @@ img.special-projects-banner {
 
     max-width: $laptop-width;
     max-height: 600px;
-  }
 
-  img.special-projects-banner {
-    display: initial;
-    position: relative;
-    width: 200px;
-    top: 15px;
-    z-index: 1;
+    img.special-projects-banner {
+      display: initial;
+      position: relative;
+      width: 200px;
+      top: 15px;
+      z-index: 1;
+    }
   }
 
   #home-content {

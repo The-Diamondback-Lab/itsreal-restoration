@@ -7,22 +7,20 @@ export default class BasePage extends React.Component {
     super(props);
 
     this.state = {
-      loading: true,
-      loaderFadedOut: false,
+      loading: true
     };
   }
 
   componentDidMount() {
     this.setState({
-      loading: false,
-      loaderFadedOut: false,
+      loading: false
     });
   }
 
   render() {
     return (
       <React.Fragment>
-        <LoadingLogo loading={this.state.loading} fadedOut={this.state.loaderFadedOut} />
+        <LoadingLogo loading={this.state.loading} />
         {this.props.pageComponent}
       </React.Fragment>
     )

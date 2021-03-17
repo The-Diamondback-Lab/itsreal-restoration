@@ -1,5 +1,10 @@
 @import './utils.scss';
 
+#home-root {
+  width: 100%;
+  height: 100%;
+}
+
 #home-container {
   width: 100%;
   height: 100%;
@@ -69,7 +74,7 @@
 }
 
 @media screen and (min-width: $laptop-width) {
-  #root {
+  #home-root {
     display: flex;
     justify-content: center;
     align-items: center;

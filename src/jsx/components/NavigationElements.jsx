@@ -18,7 +18,7 @@ export default function NavigationElements() {
     <div id="navigation-elems">
       {tocData.map((data, i) =>
         <a href={'/' + data.path}
-          key={`nav-part-${i}`}
+          key={`nav-part-${i+1}`}
           target="_blank"
           rel="noreferrer">{data.numeral}</a>
       )}

@@ -1,5 +1,5 @@
 [
-  {"numeral": "I.", "path": "on-her-own"},
+  {"numeral": "I.", "path": "on-her-own", "hasTimeline": true},
   {"numeral": "II.", "path": "inside-the-culture"},
   {"numeral": "III.", "path": "care-granted"},
   {"numeral": "IV.", "path": "i-can-never-escape"},

@@ -36,6 +36,8 @@ $initial-dot-margin: 10px;
 }
 
 #loading-logo {
+  position: fixed;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,7 +91,10 @@ $initial-dot-margin: 10px;
 }
 
 #loading-logo.fadeOut {
+  z-index: 1000;
   animation-name: fadeOut;
-  animation-duration: 1500ms;
+  animation-duration: 750ms;
+  animation-fill-mode: forwards;
+  animation-delay: 250ms;
   transition-timing-function: ease-in-out;
 }

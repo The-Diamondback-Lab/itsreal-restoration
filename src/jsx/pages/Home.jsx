@@ -4,37 +4,9 @@ import NavigationElements from '../components/NavigationElements';
 
 import mobileBanner from '../../assets/mobile-banner.png';
 import specialProjectBanner from '../../assets/special-project-banner.png';
-import LoadingLogo from '../components/LoadingLogo';
 
 export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: true,
-      fadedOut: false
-    };
-  }
-
-  componentDidMount() {
-    this.setState({
-      loading: false,
-      fadedOut: false
-    }, () => {
-      setTimeout(() => {
-        this.setState({
-          loading: false,
-          fadedOut: true
-        });
-      }, 1500);
-    });
-  }
-
   render() {
-    if (this.state.loading || !this.state.fadedOut) {
-      return <LoadingLogo loading={this.state.loading}/>
-    }
-
     return (
       <div id="home-root">
         <div id="home-container">

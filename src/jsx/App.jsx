@@ -10,12 +10,13 @@ import Article from './pages/Article';
 
 import tocData from '../data/toc.json';
 import LoadingLogo from "./components/LoadingLogo";
+import BasePage from "./pages/BasePage";
 
 export default function App() {
   // Mapping each part in table of contents to a Route object
   let articleRoutes = tocData.map((x, i) => (
     <Route exact path={'/' + x.path} key={`route-part-${i+1}`}>
-      <Article part={x.path} hasTimeline={x.hasTimeline}/>
+      <BasePage pageComponent={<Article part={x.path} hasTimeline={x.hasTimeline}/>} />
     </Route>
   ));
 
@@ -23,7 +24,7 @@ export default function App() {
     <Router>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <BasePage pageComponent={<Home />} />
           </Route>
           <Route exact path="/loading">
             <LoadingLogo />

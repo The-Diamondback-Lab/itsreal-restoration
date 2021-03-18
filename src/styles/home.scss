@@ -97,6 +97,10 @@
   }
 
   #home-content {
+    display: grid;
+    grid-template-rows: [header] 200px [blurb] 100px [nav] auto;
+    justify-items: center;
+    align-items: center;
     max-width: $laptop-width;
     width: 80%;
     height: 75%;
@@ -116,6 +120,8 @@
     h1 {
       display: initial;
 
+      grid-row: header;
+
       margin: 0;
 
       font-family: 'Playfair Display SC', serif;
@@ -129,6 +135,8 @@
     }
 
     p {
+      grid-row: blurb;
+
       margin-left: 5em;
       margin-right: 5em;
     }
@@ -138,6 +146,8 @@
     }
 
     #navigation-elems {
+      grid-row: nav;
+
       font-size: 3em;
       background: none;
 

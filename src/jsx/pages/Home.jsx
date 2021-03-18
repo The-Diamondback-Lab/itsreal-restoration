@@ -5,7 +5,7 @@ import HomeNavigation from '../components/HomeNavigation';
 
 import mobileBanner from '../../assets/mobile-banner.png';
 import specialProjectBanner from '../../assets/special-project-logo-black.png';
-import { headers, blurbs } from '../../utils.js';
+import { headers, blurbs, backgrounds } from '../../utils.js';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -15,10 +15,14 @@ export default class Home extends React.Component {
     this.onAnchorUnhover = this.onAnchorUnhover.bind(this);
 
     this.state = {
+      rootBackground: '',
+      containerBackground: `url(${backgrounds.DEFAULT})`,
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
+      smallHeader: false,
+      smallBlurb: false,
       hideBanner: false,
-      background: ''
+      whiteTheme: false
     }
   }
 
@@ -38,42 +42,55 @@ export default class Home extends React.Component {
    */
   onAnchorHover(anchorIndex) {
     console.log(`Entered ${anchorIndex}`);
+    let key = 'part-' + anchorIndex;
     this.setState({
-      header: headers['part-' + anchorIndex],
-      blurb: blurbs['part-' + anchorIndex],
+      rootBackground: `url(${backgrounds[key]})`,
+      containerBackground: '',
+      header: headers[key],
+      blurb: blurbs[key],
       smallHeader: true,
-      smallBlurb: true
+      smallBlurb: true,
+      hideBanner: true,
+      whiteTheme: true
     });
-    // Apply ".part-x" class to #home-container; this will set the background
-    // image to something else
-    // Apply ".hidden" class to .special-projects-banner that sets visibility
-    // to hidden
-    // Apply ".white-bg" class to #home-content: this will set the background
-    // white with some slight transparency, remove the white boarder, and make
-    // all text black (title, blurb, nav elems and their underline).
   }
 
   onAnchorUnhover(anchorIndex) {
     // Reset all changes applied by onAnchorHover
     console.log(`Left ${anchorIndex}`);
     this.setState({
+      rootBackground: '',
+      containerBackground: `url(${backgrounds.DEFAULT})`,
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,
-      smallBlurb: false
+      smallBlurb: false,
+      hideBanner: false,
+      whiteTheme: false
     });
   }
 
   render() {
     let headerClass = this.state.smallHeader ? 'smaller' : '';
     let blurbClass = this.state.smallBlurb ? 'smaller' : '';
+    let containerClass = this.state.whiteTheme
+      ? 'white-theme'
+      : '';
+    let rootStyle = { backgroundImage: this.state.rootBackground };
+    let bannerClass = this.state.hideBanner
+      ? 'special-projects-banner hidden'
+      : 'special-projects-banner';
 
     return (
-      <div id="home-root">
-        <div id="home-container">
-          <img className="special-projects-banner" src={specialProjectBanner} alt="Special Project Logo"></img>
+      <div id="home-root" style={rootStyle}>
+        <div id="home-container" className={containerClass}>
+          <img className={bannerClass}
+            src={specialProjectBanner}
+            alt="Special Project Logo"></img>
           <div id="home-content">
-            <img className="mobile-banner" src={mobileBanner} alt="&quot;It's Real&quot; Banner"></img>
+            <img className="mobile-banner"
+              src={mobileBanner}
+              alt="&quot;It's Real&quot; Banner"></img>
             <h1 className={headerClass}>{this.state.header}</h1>
             <p className={blurbClass}>{this.state.blurb}</p>
             <HomeNavigation onHover={this.onAnchorHover} onUnhover={this.onAnchorUnhover}/>

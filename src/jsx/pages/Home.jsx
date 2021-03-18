@@ -50,7 +50,6 @@ export default class Home extends React.Component {
     // Apply ".white-bg" class to #home-content: this will set the background
     // white with some slight transparency, remove the white boarder, and make
     // all text black (title, blurb, nav elems and their underline).
-    // Apply ".smaller" class to header to make it smaller...
   }
 
   onAnchorUnhover(anchorIndex) {

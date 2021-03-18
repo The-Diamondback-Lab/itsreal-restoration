@@ -78,8 +78,8 @@ export default class Home extends React.Component {
       : '';
     let rootStyle = { backgroundImage: this.state.rootBackground };
     let bannerClass = this.state.hideBanner
-      ? 'special-projects-banner hidden'
-      : 'special-projects-banner';
+      ? 'transition special-projects-banner hidden'
+      : 'transition special-projects-banner';
 
     return (
       <div id="home-root" style={rootStyle}>
@@ -93,7 +93,9 @@ export default class Home extends React.Component {
               alt="&quot;It's Real&quot; Banner"></img>
             <h1 className={headerClass}>{this.state.header}</h1>
             <p className={blurbClass}>{this.state.blurb}</p>
-            <HomeNavigation onHover={this.onAnchorHover} onUnhover={this.onAnchorUnhover}/>
+            <HomeNavigation
+              onHover={this.onAnchorHover}
+              onUnhover={this.onAnchorUnhover}/>
           </div>
         </div>
       </div>

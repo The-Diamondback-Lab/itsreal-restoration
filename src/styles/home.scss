@@ -1,7 +1,11 @@
 @import './utils.scss';
 
 .hidden {
-  visibility: hidden;
+  opacity: 0;
+}
+
+.transition {
+  transition: all 0.25s ease-in-out 0s;
 }
 
 #home-root {
@@ -177,7 +181,7 @@
       }
 
       a:hover {
-        border-bottom: 1px solid black;
+        border-bottom-color: rgba(0, 0, 0, 1);
       }
     }
   }

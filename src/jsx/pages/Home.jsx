@@ -46,7 +46,8 @@ export default class Home extends React.Component {
     });
     // Apply ".part-x" class to #home-container; this will set the background
     // image to something else
-    // Apply ".hidden" class to .special-projects-banner
+    // Apply ".hidden" class to .special-projects-banner that sets visibility
+    // to hidden
     // Apply ".white-bg" class to #home-content: this will set the background
     // white with some slight transparency, remove the white boarder, and make
     // all text black (title, blurb, nav elems and their underline).

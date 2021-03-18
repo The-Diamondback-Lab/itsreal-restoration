@@ -113,11 +113,6 @@
       display: none;
     }
 
-    p {
-      margin-left: 5em;
-      margin-right: 5em;
-    }
-
     h1 {
       display: initial;
 
@@ -127,6 +122,19 @@
       font-size: 12.5em;
       letter-spacing: 0;
       text-transform: uppercase;
+    }
+
+    h1.smaller {
+      font-size: 5em;
+    }
+
+    p {
+      margin-left: 5em;
+      margin-right: 5em;
+    }
+
+    p.smaller {
+      font-size: 1.8em;
     }
 
     #navigation-elems {

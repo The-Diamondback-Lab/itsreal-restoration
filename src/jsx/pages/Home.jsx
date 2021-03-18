@@ -74,7 +74,6 @@ export default class Home extends React.Component {
           <img className="special-projects-banner" src={specialProjectBanner} alt="Special Project Logo"></img>
           <div id="home-content">
             <img className="mobile-banner" src={mobileBanner} alt="&quot;It's Real&quot; Banner"></img>
-            {/* lsquo and rsquo are "fancy" single quotes */}
             <h1 className={headerClass}>{this.state.header}</h1>
             <p className={blurbClass}>{this.state.blurb}</p>
             <HomeNavigation onHover={this.onAnchorHover} onUnhover={this.onAnchorUnhover}/>

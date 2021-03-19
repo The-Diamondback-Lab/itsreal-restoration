@@ -16,7 +16,6 @@ export default class Home extends React.Component {
 
     this.state = {
       rootBackground: '',
-      containerBackground: '',
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,
@@ -45,7 +44,6 @@ export default class Home extends React.Component {
     let key = 'part-' + anchorIndex;
     this.setState({
       rootBackground: `url(${backgrounds[key]})`,
-      containerBackground: '',
       header: headers[key],
       blurb: blurbs[key],
       smallHeader: true,
@@ -60,7 +58,6 @@ export default class Home extends React.Component {
     console.log(`Left ${anchorIndex}`);
     this.setState({
       rootBackground: '',
-      containerBackground: '',
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,

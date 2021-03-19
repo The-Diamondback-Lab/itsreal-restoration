@@ -15,7 +15,7 @@ export default class Home extends React.Component {
     this.onAnchorUnhover = this.onAnchorUnhover.bind(this);
 
     this.state = {
-      rootBackground: '',
+      background: '',
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,
@@ -43,7 +43,7 @@ export default class Home extends React.Component {
     console.log(`Entered ${anchorIndex}`);
     let key = 'part-' + anchorIndex;
     this.setState({
-      rootBackground: `url(${backgrounds[key]})`,
+      background: `url("/assets/watercolor-white-bg.png"), url(${backgrounds[key]})`,
       header: headers[key],
       blurb: blurbs[key],
       smallHeader: true,
@@ -57,7 +57,7 @@ export default class Home extends React.Component {
     // Reset all changes applied by onAnchorHover
     console.log(`Left ${anchorIndex}`);
     this.setState({
-      rootBackground: '',
+      background: '',
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,
@@ -73,14 +73,14 @@ export default class Home extends React.Component {
     let containerClass = this.state.whiteTheme
       ? 'transition white-theme'
       : 'transition';
-    let rootStyle = { backgroundImage: this.state.rootBackground };
+    let containerStyle = { backgroundImage: this.state.background };
     let bannerClass = this.state.hideBanner
       ? 'transition special-projects-banner hidden'
       : 'transition special-projects-banner';
 
     return (
-      <div id="home-root" style={rootStyle} className={containerClass}>
-        <div id="home-container" className={containerClass}>
+      <div id="home-root" className={containerClass}>
+        <div id="home-container" style={containerStyle} className={containerClass}>
           <img className={bannerClass}
             src={specialProjectBanner}
             alt="Special Project Logo"></img>

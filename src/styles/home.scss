@@ -192,19 +192,19 @@ $transition-time: 500ms;
   }
 
   @at-root #home-root#{&} {
-    animation-name: fadeOutPartBackground;
+    animation-name: fadeOutBackground;
     animation-duration: $transition-time;
     animation-timing-function: ease-in-out;
 
     &.white-theme {
-      animation-name: fadeInPartBackground;
+      animation-name: fadeInBackground;
       animation-duration: $transition-time;
       animation-timing-function: ease-in-out;
     }
   }
 }
 
-@keyframes fadeInPartBackground {
+@keyframes fadeInBackground {
   0% {
     opacity: 0;
   }
@@ -218,7 +218,7 @@ $transition-time: 500ms;
   }
 }
 
-@keyframes fadeOutPartBackground {
+@keyframes fadeOutBackground {
   0% {
     opacity: 0;
   }

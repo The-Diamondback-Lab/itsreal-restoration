@@ -33,7 +33,7 @@ export default class Home extends React.Component {
       // work (i.e. network requests)
       setTimeout(() => {
         this.props.onReady();
-      }, 1000);
+      }, 0);
     }
   }
 

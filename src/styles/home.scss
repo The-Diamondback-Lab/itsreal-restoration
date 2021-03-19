@@ -177,7 +177,7 @@
   }
 }
 
-$transition-time: 0.25s;
+$transition-time: 250ms;
 
 .hidden {
   opacity: 0;
@@ -186,9 +186,49 @@ $transition-time: 0.25s;
 .transition {
   transition-duration: $transition-time;
   transition-timing-function: ease-in-out;
-  transition-property: border, color, opacity;
+  transition-property: border, color, opacity, background-color;
 
   &.special-projects-banner {
     transition-timing-function: cubic-bezier( 0, 0.95, 0.51, 1 );
+  }
+
+  @at-root #home-root#{&} {
+    animation-name: fadeOutPartBackground;
+    animation-duration: $transition-time;
+    animation-timing-function: ease-in-out;
+
+    &.white-theme {
+      animation-name: fadeInPartBackground;
+      animation-duration: $transition-time;
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
+
+@keyframes fadeInPartBackground {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutPartBackground {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

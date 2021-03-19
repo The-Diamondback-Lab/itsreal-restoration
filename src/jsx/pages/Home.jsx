@@ -16,7 +16,7 @@ export default class Home extends React.Component {
 
     this.state = {
       rootBackground: '',
-      containerBackground: `url(${backgrounds.DEFAULT})`,
+      containerBackground: '',
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,
@@ -60,7 +60,7 @@ export default class Home extends React.Component {
     console.log(`Left ${anchorIndex}`);
     this.setState({
       rootBackground: '',
-      containerBackground: `url(${backgrounds.DEFAULT})`,
+      containerBackground: '',
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,
@@ -74,15 +74,15 @@ export default class Home extends React.Component {
     let headerClass = this.state.smallHeader ? 'smaller' : '';
     let blurbClass = this.state.smallBlurb ? 'smaller' : '';
     let containerClass = this.state.whiteTheme
-      ? 'white-theme'
-      : '';
+      ? 'transition white-theme'
+      : 'transition';
     let rootStyle = { backgroundImage: this.state.rootBackground };
     let bannerClass = this.state.hideBanner
       ? 'transition special-projects-banner hidden'
       : 'transition special-projects-banner';
 
     return (
-      <div id="home-root" style={rootStyle}>
+      <div id="home-root" style={rootStyle} className={containerClass}>
         <div id="home-container" className={containerClass}>
           <img className={bannerClass}
             src={specialProjectBanner}

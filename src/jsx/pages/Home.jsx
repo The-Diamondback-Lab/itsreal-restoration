@@ -5,7 +5,7 @@ import HomeNavigation from '../components/HomeNavigation';
 
 import mobileBanner from '../../assets/mobile-banner.png';
 import specialProjectBanner from '../../assets/special-project-logo-black.png';
-import { headers, blurbs, backgrounds } from '../../utils.js';
+import { headers, blurbs } from '../../utils.js';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export default class Home extends React.Component {
     this.onAnchorUnhover = this.onAnchorUnhover.bind(this);
 
     this.state = {
-      background: '',
+      backgroundClass: '',
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,
@@ -43,7 +43,7 @@ export default class Home extends React.Component {
     console.log(`Entered ${anchorIndex}`);
     let key = 'part-' + anchorIndex;
     this.setState({
-      background: `url("/assets/watercolor-white-bg.png"), url(${backgrounds[key]})`,
+      backgroundClass: `part${anchorIndex}-bg`,
       header: headers[key],
       blurb: blurbs[key],
       smallHeader: true,
@@ -57,7 +57,7 @@ export default class Home extends React.Component {
     // Reset all changes applied by onAnchorHover
     console.log(`Left ${anchorIndex}`);
     this.setState({
-      background: '',
+      backgroundClass: '',
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,
@@ -71,16 +71,15 @@ export default class Home extends React.Component {
     let headerClass = this.state.smallHeader ? 'smaller' : '';
     let blurbClass = this.state.smallBlurb ? 'smaller' : '';
     let containerClass = this.state.whiteTheme
-      ? 'transition white-theme'
+      ? ['transition', 'white-theme', this.state.backgroundClass].join(' ')
       : 'transition';
-    let containerStyle = { backgroundImage: this.state.background };
     let bannerClass = this.state.hideBanner
-      ? 'transition special-projects-banner hidden'
-      : 'transition special-projects-banner';
+      ? ['transition', 'special-projects-banner', 'hidden'].join(' ')
+      : ['transition', 'special-projects-banner'].join(' ');
 
     return (
       <div id="home-root" className={containerClass}>
-        <div id="home-container" style={containerStyle} className={containerClass}>
+        <div id="home-container" className={containerClass}>
           <img className={bannerClass}
             src={specialProjectBanner}
             alt="Special Project Logo"></img>

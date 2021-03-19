@@ -231,3 +231,14 @@ $transition-time: 500ms;
     opacity: 1;
   }
 }
+
+$parts: 1, 2, 3, 4, 5, 6, 7;
+$whitebgUrl: "/assets/watercolor-white-bg.png";
+
+@each $partNum in $parts {
+  #home-container.part#{$partNum}-bg {
+    background: url($whitebgUrl), url("/assets/part#{$partNum}-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

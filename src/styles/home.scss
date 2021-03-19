@@ -1,21 +1,5 @@
 @import './utils.scss';
 
-$transition-time: 0.25s;
-
-.hidden {
-  opacity: 0;
-}
-
-.transition {
-  transition-duration: $transition-time;
-  transition-timing-function: ease-in-out;
-  transition-property: border, color, opacity;
-
-  &.special-projects-banner {
-    transition-timing-function: cubic-bezier( 0, 0.95, 0.51, 1 );
-  }
-}
-
 #home-root {
   width: 100%;
   height: 100%;
@@ -193,5 +177,21 @@ $transition-time: 0.25s;
         border-bottom-color: rgba(0, 0, 0, 1);
       }
     }
+  }
+}
+
+$transition-time: 0.25s;
+
+.hidden {
+  opacity: 0;
+}
+
+.transition {
+  transition-duration: $transition-time;
+  transition-timing-function: ease-in-out;
+  transition-property: border, color, opacity;
+
+  &.special-projects-banner {
+    transition-timing-function: cubic-bezier( 0, 0.95, 0.51, 1 );
   }
 }

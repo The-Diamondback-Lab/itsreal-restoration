@@ -6,6 +6,7 @@ import HomeNavigation from '../components/HomeNavigation';
 import mobileBanner from '../../assets/mobile-banner.png';
 import specialProjectBanner from '../../assets/special-project-logo-black.png';
 import { headers, blurbs } from '../../utils.js';
+import HomeBackgrounds from '../components/HomeBackgrounds';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export default class Home extends React.Component {
     this.onAnchorUnhover = this.onAnchorUnhover.bind(this);
 
     this.state = {
-      backgroundClass: '',
+      selectedBackground: null,
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,
@@ -43,7 +44,7 @@ export default class Home extends React.Component {
     console.log(`Entered ${anchorIndex}`);
     let key = 'part-' + anchorIndex;
     this.setState({
-      backgroundClass: `part${anchorIndex}-bg`,
+      selectedBackground: anchorIndex,
       header: headers[key],
       blurb: blurbs[key],
       smallHeader: true,
@@ -57,7 +58,7 @@ export default class Home extends React.Component {
     // Reset all changes applied by onAnchorHover
     console.log(`Left ${anchorIndex}`);
     this.setState({
-      backgroundClass: '',
+      selectedBackground: null,
       header: headers.DEFAULT,
       blurb: blurbs.DEFAULT,
       smallHeader: false,
@@ -78,23 +79,26 @@ export default class Home extends React.Component {
       : ['transition', 'special-projects-banner'].join(' ');
 
     return (
-      <div id="home-root" className={containerClass}>
-        <div id="home-container" className={containerClass}>
-          <img className={bannerClass}
-            src={specialProjectBanner}
-            alt="Special Project Logo"></img>
-          <div id="home-content">
-            <img className="mobile-banner"
-              src={mobileBanner}
-              alt="&quot;It's Real&quot; Banner"></img>
-            <h1 className={headerClass}>{this.state.header}</h1>
-            <p className={blurbClass}>{this.state.blurb}</p>
-            <HomeNavigation
-              onHover={this.onAnchorHover}
-              onUnhover={this.onAnchorUnhover}/>
+      <React.Fragment>
+        <HomeBackgrounds selectedBackground={this.state.selectedBackground}/>
+        <div id="home-root" className={containerClass}>
+          <div id="home-container" className={containerClass}>
+            <img className={bannerClass}
+              src={specialProjectBanner}
+              alt="Special Project Logo"></img>
+            <div id="home-content">
+              <img className="mobile-banner"
+                src={mobileBanner}
+                alt="&quot;It's Real&quot; Banner"></img>
+              <h1 className={headerClass}>{this.state.header}</h1>
+              <p className={blurbClass}>{this.state.blurb}</p>
+              <HomeNavigation
+                onHover={this.onAnchorHover}
+                onUnhover={this.onAnchorUnhover}/>
+            </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

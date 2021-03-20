@@ -27,3 +27,5 @@ tocData.forEach((x, i) => {
   blurbs[key] = blurb;
   backgrounds[key] = `/assets/part${i+1}-bg.jpg`;
 });
+
+export const numParts = tocData.length;

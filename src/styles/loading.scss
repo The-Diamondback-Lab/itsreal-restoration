@@ -90,6 +90,7 @@ $initial-dot-margin: 10px;
   100% {
     opacity: 0;
     visibility: hidden;
+    overflow: hidden;
     z-index: -1000;
   }
 }

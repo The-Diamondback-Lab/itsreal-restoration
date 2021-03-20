@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { numParts } from '../../utils';
+import { numParts } from '../../constants';
 
 export default function HomeBackgrounds(props) {
   let bgDivs = [];

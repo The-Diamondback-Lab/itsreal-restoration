@@ -5,7 +5,7 @@ import HomeNavigation from '../components/HomeNavigation';
 
 import mobileBanner from '../../assets/mobile-banner.png';
 import specialProjectBanner from '../../assets/special-project-logo-black.png';
-import { headers, blurbs } from '../../utils.js';
+import { headers, blurbs } from '../../constants.js';
 import HomeBackgrounds from '../components/HomeBackgrounds';
 
 export default class Home extends React.Component {

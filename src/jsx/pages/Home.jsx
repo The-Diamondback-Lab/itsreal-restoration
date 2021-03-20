@@ -78,20 +78,40 @@ export default class Home extends React.Component {
       ? ['transition', 'special-projects-banner', 'hidden'].join(' ')
       : ['transition', 'special-projects-banner'].join(' ');
 
+    let containerBackgroundDivs = null;
+    if (this.state.whiteTheme) {
+      containerBackgroundDivs =
+      <React.Fragment>
+        <div className="transition container-bg"></div>
+        <div className="transition container-bg light active"></div>
+      </React.Fragment>
+    } else {
+      containerBackgroundDivs =
+      <React.Fragment>
+        <div className="transition container-bg active"></div>
+        <div className="transition container-bg light"></div>
+      </React.Fragment>
+    }
+
     return (
       <React.Fragment>
         <HomeBackgrounds selectedBackground={this.state.selectedBackground}/>
         <div id="home-root" className={containerClass}>
           <div id="home-container" className={containerClass}>
+            {containerBackgroundDivs}
+
             <img className={bannerClass}
               src={specialProjectBanner}
               alt="Special Project Logo"></img>
+
             <div id="home-content">
               <img className="mobile-banner"
                 src={mobileBanner}
                 alt="&quot;It's Real&quot; Banner"></img>
+
               <h1 className={headerClass}>{this.state.header}</h1>
               <p className={blurbClass}>{this.state.blurb}</p>
+
               <HomeNavigation
                 onHover={this.onAnchorHover}
                 onUnhover={this.onAnchorUnhover}/>

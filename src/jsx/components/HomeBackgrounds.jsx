@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { numParts } from '../../utils';
 
 export default function HomeBackgrounds(props) {
@@ -14,4 +16,9 @@ export default function HomeBackgrounds(props) {
   }
 
   return bgDivs;
+}
+
+HomeBackgrounds.propTypes = {
+  /** Which background is selected to show (indexed at 1) */
+  selectedBackground: PropTypes.number
 }

@@ -32,7 +32,6 @@ export default class HomeNavigation extends React.Component {
             className="transition"
             onMouseEnter={this.onMouseEnter.bind(this, i+1)}
             onMouseLeave={this.onMouseLeave.bind(this, i+1)}
-            target="_blank"
             rel="noreferrer"
             key={`nav-part-${i+1}`}>{data.numeral}</a>
         )}

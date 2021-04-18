@@ -11,7 +11,7 @@ export default function HomeBackgrounds(props) {
       classes.push('active');
     }
 
-    let div = <div class={classes.join(' ')} key={`full-bg-${i+1}`}></div>;
+    let div = <div className={classes.join(' ')} key={`full-bg-${i+1}`}></div>;
     bgDivs.push(div);
   }
 

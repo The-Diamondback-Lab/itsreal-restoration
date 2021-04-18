@@ -8,7 +8,7 @@ export default class Article extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.props.onReady();
-    }, 2000);
+    }, 0);
   }
 
   render() {

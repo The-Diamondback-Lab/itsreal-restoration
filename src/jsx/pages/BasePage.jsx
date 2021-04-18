@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 import LoadingLogo from '../components/LoadingLogo';
 
+/**
+ * @extends React.Component<BasePagePropTypes>
+ */
 export default class BasePage extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +32,7 @@ export default class BasePage extends React.Component {
       ...this.props.pageProps,
       onReady: this.ready
     });
+
     return (
       <React.Fragment>
         <LoadingLogo loading={this.state.loading} />
@@ -44,3 +48,9 @@ BasePage.propTypes = {
   /** Props passed to the page component */
   pageProps: PropTypes.any
 }
+
+/**
+ * @typedef BasePagePropTypes
+ * @prop {React.Component} pageComponent
+ * @prop {any} pageProps
+ */

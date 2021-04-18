@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 import tocData from '../../data/toc.json';
 
 /**
- * Generates the navigation elements for the home page
- * @param {HomeNavigationPropTypes} props
- * @returns a `div` element whose children are anchor tags `a`
+ * @extends React.Component<HomeNavigationPropTypes>
  */
 export default class HomeNavigation extends React.Component {
   constructor(props) {

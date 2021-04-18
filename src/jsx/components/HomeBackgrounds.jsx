@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 
 import { numParts } from '../../constants';
 
+/**
+ * @param {HomeBackgroundsPropTypes} props
+ */
 export default function HomeBackgrounds(props) {
   let bgDivs = [];
 
@@ -22,3 +25,8 @@ HomeBackgrounds.propTypes = {
   /** Which background is selected to show (indexed at 1) */
   selectedBackground: PropTypes.number
 }
+
+/**
+ * @typedef HomeBackgroundsPropTypes
+ * @prop {number} selectedBackground
+ */

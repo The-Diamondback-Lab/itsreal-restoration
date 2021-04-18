@@ -8,6 +8,9 @@ import specialProjectBanner from '../../assets/special-project-logo-black.png';
 import { headers, blurbs } from '../../constants.js';
 import HomeBackgrounds from '../components/HomeBackgrounds';
 
+/**
+ * @extends React.Component<HomePropTypes>
+ */
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -130,3 +133,8 @@ Home.propTypes = {
    */
   onReady: PropTypes.func
 }
+
+/**
+ * @typedef HomePropTypes
+ * @prop {() => void} onReady
+ */

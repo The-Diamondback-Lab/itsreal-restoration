@@ -1,0 +1,24 @@
+.article-cover {
+  width: 100%;
+  height: 250px;
+}
+
+#article-container {
+  h1 {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+
+    font-family: 'Playfair Display SC', serif;
+
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: 'Lora', serif;
+
+    &.byline {
+      font-family: 'Playfair Display', serif;
+    }
+  }
+}

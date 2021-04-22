@@ -13,19 +13,19 @@ export default function ShortNavigation(props) {
 
   if (prevPagePath) {
     prevNav = (
-      <div>
-        <FiChevronLeft size="4em" />
-        <a href={'/' + prevPagePath}>{romanNumerals[pageNumber-1]}</a>
-      </div>
+      <a href={'/' + prevPagePath}>
+        <FiChevronLeft size="3.5em" strokeWidth="1px" />
+        <span>{romanNumerals[pageNumber-1]}</span>
+      </a>
     );
   }
 
   if (nextPagePath) {
     nextNav = (
-      <div>
-        <a href={'/' + nextPagePath}>{romanNumerals[pageNumber+1]}</a>
-        <FiChevronRight size="4em" />
-      </div>
+      <a href={'/' + prevPagePath}>
+        <span>{romanNumerals[pageNumber+1]}</span>
+        <FiChevronRight size="3.5em" strokeWidth="1px" />
+      </a>
     );
   }
 

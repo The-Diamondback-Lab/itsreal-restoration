@@ -1,3 +1,6 @@
+@import './article-container.scss';
+@import './nav-short.scss';
+
 .article-cover {
   width: 100%;
   height: 250px;
@@ -8,52 +11,6 @@
   width: 95%;
   margin: auto;
 
-  #article-container {
-    h1 {
-      width: 100%;
-      text-align: center;
-
-      font-family: 'Playfair Display SC', serif;
-      font-size: 5em;
-
-      text-transform: uppercase;
-    }
-
-    p {
-      $contentFontSize: 1.8em;
-
-      margin: 1em 0;
-      font-size: $contentFontSize;
-      font-family: 'Lora', serif;
-      line-height: 1.75em;
-
-      &.byline {
-        margin: 1em 0;
-
-        font-size: 1.3 * $contentFontSize;
-        text-align: center;
-
-        font-family: 'Playfair Display', serif;
-      }
-    }
-  }
-
-  .nav.short {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    a {
-      width: fit-content;
-      display: flex;
-      align-items: center;
-
-      span {
-        font-size: 2.5em;
-        margin: 0 0.25em;
-      }
-    }
-  }
+  @include article-container;
+  @include nav-short;
 }

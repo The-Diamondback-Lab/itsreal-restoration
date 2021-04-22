@@ -17,7 +17,7 @@ export default function App() {
   let articleRoutes = tocData.map((data, i) => {
     let pageProps = {
       ...data,
-      pageNumber: i+1
+      pageNumber: i
     };
 
     if (i > 0) pageProps.prevPagePath = tocData[i-1].path;

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import ArticleContent from '../components/ArticleContent';
 import ShortNavigation from '../components/ShortNavigation';
+import Footer from '../components/Footer';
 
 /**
  * @extends React.Component<ArticlePropTypes>
@@ -28,6 +29,7 @@ export default class Article extends React.Component {
             prevPagePath={prevPagePath}
             nextPagePath={nextPagePath} />
           <div className="divider" />
+          <Footer />
         </div>
       </React.Fragment>
     );

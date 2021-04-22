@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import ArticleContent from '../components/ArticleContent';
+import ShortNavigation from '../components/ShortNavigation';
 
 /**
  * @extends React.Component<ArticlePropTypes>
@@ -15,7 +15,7 @@ export default class Article extends React.Component {
   }
 
   render() {
-    const { path } = this.props;
+    const { path, pageNumber, prevPagePath, nextPagePath } = this.props;
     let title = path.split('-').join(' ');
 
     return (
@@ -23,6 +23,10 @@ export default class Article extends React.Component {
         <img className="article-cover" src="/assets/part1-bg.jpg" />
         <div id="page-container">
           <ArticleContent title={title} />
+          <ShortNavigation
+            pageNumber={pageNumber}
+            prevPagePath={prevPagePath}
+            nextPagePath={nextPagePath} />
         </div>
       </React.Fragment>
     );
@@ -31,15 +35,19 @@ export default class Article extends React.Component {
 
 Article.propTypes = {
   onReady: PropTypes.func.isRequired,
-  pageIndex: PropTypes.number.isRequired,
   path: PropTypes.string.isRequired,
-  hasTimeline: PropTypes.bool
+  pageNumber: PropTypes.number.isRequired,
+  hasTimeline: PropTypes.bool,
+  prevPagePath: PropTypes.string,
+  nextPagePath: PropTypes.string
 }
 
 /**
  * @typedef ArticlePropTypes
  * @prop {() => void} onReady
- * @prop {number} pageIndex
  * @prop {string} path
+ * @prop {number} pageNumber
  * @prop {boolean} [hasTimeline]
+ * @prop {string} [prevPagePath]
+ * @prop {string} [nextPagePath]
  */

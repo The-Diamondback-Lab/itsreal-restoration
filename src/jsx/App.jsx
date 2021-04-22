@@ -15,7 +15,13 @@ import BasePage from "./pages/BasePage";
 export default function App() {
   // Mapping each part in table of contents to a Route object
   let articleRoutes = tocData.map((data, i) => {
-    let pageProps = {...data, pageIndex: i+1};
+    let pageProps = {
+      ...data,
+      pageNumber: i+1
+    };
+
+    if (i > 0) pageProps.prevPagePath = tocData[i-1].path;
+    if (i < tocData.length - 1) pageProps.nextPagePath = tocData[i+1].path;
 
     let basePage = (<BasePage
       pageComponent={Article}

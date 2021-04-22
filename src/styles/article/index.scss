@@ -37,4 +37,18 @@
       }
     }
   }
+
+  .nav.short {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+    }
+  }
 }

@@ -17,7 +17,7 @@ export default function App() {
   let articleRoutes = tocData.map((data, i) => {
     let basePage = (<BasePage
       pageComponent={Article}
-      pageProps={{data}} />);
+      pageProps={data} />);
 
     return (
       <Router exact path={'/' + data.path} key={`route-part-${i+1}`}>

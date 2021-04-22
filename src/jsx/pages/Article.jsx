@@ -15,8 +15,8 @@ export default class Article extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
-    let title = data.path.split('-').join(' ');
+    const { path } = this.props;
+    let title = path.split('-').join(' ');
 
     return (
       <React.Fragment>
@@ -30,13 +30,12 @@ export default class Article extends React.Component {
 }
 
 Article.propTypes = {
-  data: PropTypes.shape({
-    path: PropTypes.string.isRequired,
-    hasTimeline: PropTypes.bool
-  })
+  path: PropTypes.string.isRequired,
+  hasTimeline: PropTypes.bool
 }
 
 /**
  * @typedef ArticlePropTypes
- * @prop {{path: string, hasTimeline?: boolean}} data
+ * @prop {string} path
+ * @prop {boolean} [hasTimeline]
  */

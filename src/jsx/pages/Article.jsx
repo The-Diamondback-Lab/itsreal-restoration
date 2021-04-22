@@ -30,12 +30,14 @@ export default class Article extends React.Component {
 }
 
 Article.propTypes = {
+  pageIndex: PropTypes.number.isRequired,
   path: PropTypes.string.isRequired,
   hasTimeline: PropTypes.bool
 }
 
 /**
  * @typedef ArticlePropTypes
+ * @prop {number} pageIndex
  * @prop {string} path
  * @prop {boolean} [hasTimeline]
  */

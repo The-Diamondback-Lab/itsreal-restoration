@@ -30,6 +30,7 @@ export default class Article extends React.Component {
 }
 
 Article.propTypes = {
+  onReady: PropTypes.func.isRequired,
   pageIndex: PropTypes.number.isRequired,
   path: PropTypes.string.isRequired,
   hasTimeline: PropTypes.bool
@@ -37,6 +38,7 @@ Article.propTypes = {
 
 /**
  * @typedef ArticlePropTypes
+ * @prop {() => void} onReady
  * @prop {number} pageIndex
  * @prop {string} path
  * @prop {boolean} [hasTimeline]

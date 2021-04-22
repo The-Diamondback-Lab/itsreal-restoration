@@ -1,3 +1,6 @@
+/**
+ * @param {ArticleContentPropTypes} props
+ */
 export default function ArticleContent(props) {
   return (
     <div id="article-container">
@@ -7,3 +10,8 @@ export default function ArticleContent(props) {
     </div>
   )
 }
+
+/**
+ * @typedef ArticleContentPropTypes
+ * @prop {string} title
+ */

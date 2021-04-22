@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+
 /**
  * @extends React.Component<ArticlePropTypes>
  */
@@ -18,15 +20,15 @@ export default class Article extends React.Component {
     return (
       <React.Fragment>
         <img className="article-cover" src="/assets/part1-bg.jpg" />
-        <div id="article-container">
-          <h1>{title}</h1>
-          <p className="byline">By John Doe</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur officiis obcaecati labore molestiae ratione atque, optio sequi cum omnis quis, facilis eaque? Id vitae quam officiis repellat voluptatum quis.</p>
+        <div id="page-container">
+          <div id="article-container">
+            <h1>{title}</h1>
+            <p className="byline">By John Doe</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur officiis obcaecati labore molestiae ratione atque, optio sequi cum omnis quis, facilis eaque? Id vitae quam officiis repellat voluptatum quis.</p>
+          </div>
         </div>
       </React.Fragment>
     );
-
-    return (<div>{this.props.data.path}</div>);
   }
 }
 

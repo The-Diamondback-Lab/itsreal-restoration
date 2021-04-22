@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import ArticleContent from '../components/ArticleContent';
 
 /**
  * @extends React.Component<ArticlePropTypes>
@@ -21,11 +22,7 @@ export default class Article extends React.Component {
       <React.Fragment>
         <img className="article-cover" src="/assets/part1-bg.jpg" />
         <div id="page-container">
-          <div id="article-container">
-            <h1>{title}</h1>
-            <p className="byline">By John Doe</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur officiis obcaecati labore molestiae ratione atque, optio sequi cum omnis quis, facilis eaque? Id vitae quam officiis repellat voluptatum quis.</p>
-          </div>
+          <ArticleContent title={title} />
         </div>
       </React.Fragment>
     );

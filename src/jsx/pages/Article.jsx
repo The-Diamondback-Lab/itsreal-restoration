@@ -27,6 +27,7 @@ export default class Article extends React.Component {
             pageNumber={pageNumber}
             prevPagePath={prevPagePath}
             nextPagePath={nextPagePath} />
+          <div className="divider" />
         </div>
       </React.Fragment>
     );

@@ -8,7 +8,7 @@ import {
 import Home from "./pages/Home";
 import Article from './pages/Article';
 
-import tocData from '../data/toc.json';
+import { tocData } from '../constants';
 import LoadingLogo from "./components/LoadingLogo";
 import BasePage from "./pages/BasePage";
 

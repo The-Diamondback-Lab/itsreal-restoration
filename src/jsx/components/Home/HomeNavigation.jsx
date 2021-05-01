@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import tocData from '../../../data/toc.json';
+import { tocData } from '../../../constants';
 
 /**
  * @extends React.Component<HomeNavigationPropTypes>

@@ -19,12 +19,23 @@
       line-height: 1.75em;
 
       &.byline {
-        margin: 1em 0;
+        margin: 1em auto;
 
-        font-size: 1.3 * $contentFontSize;
+        font-size: 2.35em;
         text-align: center;
 
         font-family: 'Playfair Display', serif;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        background-color: $selectionColor;
+        color: $selectionTextColor;
       }
     }
   }

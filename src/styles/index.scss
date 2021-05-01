@@ -21,5 +21,7 @@ a {
   text-decoration: none;
 }
 
-@media screen and (min-width: $laptop-width) {
+*::selection {
+  background-color: $selectionColor;
+  color: $selectionTextColor;
 }

@@ -8,8 +8,10 @@ const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
 export default function ShortNavigation(props) {
   const { pageNumber, prevPagePath, nextPagePath } = props;
 
-  let prevNav = null;
-  let nextNav = null;
+  // Nav elements are empty divs so that prev and next nav elements are always
+  // placed on left and right side of page (respectively).
+  let prevNav = <div></div>;
+  let nextNav = <div></div>;
 
   if (prevPagePath) {
     prevNav = (

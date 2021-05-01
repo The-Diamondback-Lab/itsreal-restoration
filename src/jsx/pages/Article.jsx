@@ -35,7 +35,7 @@ export default class Article extends React.Component {
   }
 
   render() {
-    const { path, pageNumber, prevPagePath, nextPagePath } = this.props;
+    const { path, pageNumber, prevPagePath, nextPagePath, authors } = this.props;
     const { content } = this.state;
 
     let title = path.split('-').join(' ');
@@ -48,7 +48,10 @@ export default class Article extends React.Component {
           <div></div>
         </div>
         <div id="page-container">
-          <ArticleContent title={title} content={content} />
+          <ArticleContent
+            title={title}
+            content={content}
+            authors={authors} />
           <ShortNavigation
             pageNumber={pageNumber}
             prevPagePath={prevPagePath}

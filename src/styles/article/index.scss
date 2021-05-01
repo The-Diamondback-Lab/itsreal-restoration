@@ -5,6 +5,23 @@
 .article-cover {
   width: 100%;
   height: 250px;
+
+  img {
+    position: relative;
+    z-index: 1;
+
+    height: 250px;
+    object-fit: cover;
+  }
+
+  div {
+    position: relative;
+    z-index: 2;
+    top: -75px;
+    height: 75px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  }
 }
 
 .divider {

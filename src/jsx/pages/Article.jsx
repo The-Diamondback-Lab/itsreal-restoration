@@ -18,10 +18,14 @@ export default class Article extends React.Component {
   render() {
     const { path, pageNumber, prevPagePath, nextPagePath } = this.props;
     let title = path.split('-').join(' ');
+    let imgCoverMobilePath = `/assets/part${pageNumber+1}-cover-mobile.jpg`;
 
     return (
       <React.Fragment>
-        <img className="article-cover" src="/assets/part1-bg.jpg" />
+        <div className="article-cover">
+          <img src={imgCoverMobilePath} />
+          <div></div>
+        </div>
         <div id="page-container">
           <ArticleContent title={title} />
           <ShortNavigation

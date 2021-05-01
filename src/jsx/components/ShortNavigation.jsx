@@ -22,7 +22,7 @@ export default function ShortNavigation(props) {
 
   if (nextPagePath) {
     nextNav = (
-      <a href={'/' + prevPagePath}>
+      <a href={'/' + nextPagePath}>
         <span>{romanNumerals[pageNumber+1]}</span>
         <FiChevronRight size="3.5em" strokeWidth="1px" />
       </a>

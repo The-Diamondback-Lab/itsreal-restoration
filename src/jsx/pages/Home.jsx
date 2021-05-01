@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import HomeNavigation from '../components/HomeNavigation';
+import HomeNavigation from '../components/Home/HomeNavigation';
 
 import mobileBanner from '../../assets/mobile-banner.png';
 import specialProjectBanner from '../../assets/special-project-logo-black.png';
 import { headers, blurbs } from '../../constants.js';
-import HomeBackgrounds from '../components/HomeBackgrounds';
+import HomeBackgrounds from '../components/Home/HomeBackgrounds';
 
 /**
  * @extends React.Component<HomePropTypes>

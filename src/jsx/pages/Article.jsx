@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ArticleContent from '../components/ArticleContent';
-import ShortNavigation from '../components/ShortNavigation';
+import ArticleContent from '../components/Article/ArticleContent';
+import ShortNavigation from '../components/Article/ShortNavigation';
 import Footer from '../components/Footer';
 
 /**

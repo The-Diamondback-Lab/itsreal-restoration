@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { numParts } from '../../constants';
+import { numParts } from '../../../constants';
 
 /**
  * @param {HomeBackgroundsPropTypes} props

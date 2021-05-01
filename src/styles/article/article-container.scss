@@ -58,3 +58,17 @@
     }
   }
 }
+
+@media screen and (min-width: $laptop-width) {
+  .wrap {
+    max-width: 500px;
+
+    &.left {
+      float: left;
+    }
+
+    &.right {
+      float: right;
+    }
+  }
+}

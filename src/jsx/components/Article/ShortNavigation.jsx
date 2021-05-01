@@ -1,5 +1,7 @@
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
+import { tocData } from '../../../constants';
+
 const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
 
 /**
@@ -14,18 +16,38 @@ export default function ShortNavigation(props) {
   let nextNav = <div></div>;
 
   if (prevPagePath) {
+    let romanNumeral = romanNumerals[pageNumber-1] + '.';
+    let navTitle = tocData[pageNumber-1].path.replace(/-/gi, ' ');
+    let navBlurb = tocData[pageNumber-1].navBlurb;
+
     prevNav = (
       <a href={'/' + prevPagePath}>
         <FiChevronLeft size="3.5em" strokeWidth="1px" />
-        <span>{romanNumerals[pageNumber-1]}</span>
+        <div>
+          <div>
+            <span className="numeral">{romanNumeral}</span>
+            <span className="nav-title">{navTitle}</span>
+          </div>
+          <span className="nav-blurb">{navBlurb}</span>
+        </div>
       </a>
     );
   }
 
   if (nextPagePath) {
+    let romanNumeral = romanNumerals[pageNumber+1] + '.';
+    let navTitle = tocData[pageNumber+1].path.replace(/-/gi, ' ');
+    let navBlurb = tocData[pageNumber+1].navBlurb;
+
     nextNav = (
       <a href={'/' + nextPagePath}>
-        <span>{romanNumerals[pageNumber+1]}</span>
+        <div>
+          <div>
+            <span className="numeral">{romanNumeral}</span>
+            <span className="nav-title">{navTitle}</span>
+          </div>
+          <span className="nav-blurb">{navBlurb}</span>
+        </div>
         <FiChevronRight size="3.5em" strokeWidth="1px" />
       </a>
     );

@@ -3,36 +3,43 @@
     "numeral": "I.",
     "path": "on-her-own",
     "blurb": "The university aims to resolve sexual misconduct cases in 60 business days, yet one student’s case dragged on for 152 business days.",
+    "navBlurb": "One student's sexual misconduct case took 152 business days to resolve",
     "hasTimeline": true
   },
   {
     "numeral": "II.",
     "path": "inside-the-culture",
-    "blurb": "Lacking guidance, fraternities and sororities turn to internal processes to cope with allegations of sexual assault within their community."
+    "blurb": "Lacking guidance, fraternities and sororities turn to internal processes to cope with allegations of sexual assault within their community.",
+    "navBlurb": "In the Greek community, sexual assault is often handled iternally"
   },
   {
     "numeral": "III.",
     "path": "care-granted",
-    "blurb": "UMD officials call CARE “one of the most important resources” on campus, yet half the office&lsquo;s staff is funded by temporary grants."
+    "blurb": "UMD officials call CARE “one of the most important resources” on campus, yet half the office&lsquo;s staff is funded by temporary grants.",
+    "navBlurb": "CARE to Stop Violence relies on temporary funding to serve students"
   },
   {
     "numeral": "IV.",
     "path": "i-can-never-escape",
-    "blurb": "Many survivors say campus life can intensify the post-traumatic stress and anxiety they are already struggling to overcome."
+    "blurb": "Many survivors say campus life can intensify the post-traumatic stress and anxiety they are already struggling to overcome.",
+    "navBlurb": "Campus life can intensify trauma for survivors"
   },
   {
     "numeral": "V.",
     "path": "work-in-progress",
-    "blurb": "A due process lawsuit filed against this university highlights the challenges universities face as they strive to investigate sexual assault fairly and aggressively."
+    "blurb": "A due process lawsuit filed against this university highlights the challenges universities face as they strive to investigate sexual assault fairly and aggressively.",
+    "navBlurb": "A lawsuit against UMD highlights questions of due process"
   },
   {
     "numeral": "VI.",
     "path": "insufficient-evidence",
-    "blurb": "Sexual violence is rarely reported to police. UMPD officers undergo training on interviewing techniques specific to sexual assault survivors."
+    "blurb": "Sexual violence is rarely reported to police. UMPD officers undergo training on interviewing techniques specific to sexual assault survivors.",
+    "navBlurb": "Sexual violence is rarely reported to police"
   },
   {
     "numeral": "VII.",
     "path": "first-line-of-defense",
-    "blurb": "Between 50 and 70 percent of campus sexual assaults involve alcohol. Now, CARE to Stop Violence is training College Park bar staff in bystander intervention."
+    "blurb": "Between 50 and 70 percent of campus sexual assaults involve alcohol. Now, CARE to Stop Violence is training College Park bar staff in bystander intervention.",
+    "navBlurb": "CARE to Stop Violence brings bystander intervention to bars"
   }
 ]

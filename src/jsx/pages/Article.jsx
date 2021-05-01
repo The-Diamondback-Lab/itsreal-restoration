@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 import ArticleContent from '../components/Article/ArticleContent';
 import ShortNavigation from '../components/Article/ShortNavigation';
@@ -9,14 +10,34 @@ import Footer from '../components/Footer';
  * @extends React.Component<ArticlePropTypes>
  */
 export default class Article extends React.Component {
-  componentDidMount() {
-    setTimeout(() => {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+  async componentDidMount() {
+    try {
+      let resp = await axios.get(`/data/part${this.props.pageNumber+1}.html`);
+      let content = resp.data
+        .split(/\r?\n/gi)
+        .filter(x => x.length)
+        .map(x => `<p>${x}</p>`)
+        .join('');
+
+      this.setState({
+        content
+      });
       this.props.onReady();
-    }, 0);
+    } catch (err) {
+      this.setState({ err }, this.props.onReady);
+    }
   }
 
   render() {
     const { path, pageNumber, prevPagePath, nextPagePath } = this.props;
+    const { content } = this.state;
+
     let title = path.split('-').join(' ');
     let imgCoverMobilePath = `/assets/part${pageNumber+1}-cover-mobile.jpg`;
 
@@ -27,7 +48,7 @@ export default class Article extends React.Component {
           <div></div>
         </div>
         <div id="page-container">
-          <ArticleContent title={title} />
+          <ArticleContent title={title} content={content} />
           <ShortNavigation
             pageNumber={pageNumber}
             prevPagePath={prevPagePath}

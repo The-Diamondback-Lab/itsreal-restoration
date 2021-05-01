@@ -1,5 +1,6 @@
 import About from "./About";
 import Credits from "./Credits";
+import Donate from "./Donate";
 
 export default function Footer() {
   return (
@@ -7,6 +8,8 @@ export default function Footer() {
       <About />
       <div className="divider" />
       <Credits />
+      <div className="divider" />
+      <Donate />
     </div>
   );
 }

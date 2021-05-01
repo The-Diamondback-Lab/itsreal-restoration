@@ -5,9 +5,11 @@ import Donate from "./Donate";
 export default function Footer() {
   return (
     <div className="footer">
-      <About />
-      <div className="divider" />
-      <Credits />
+      <div className="wide-split">
+        <About />
+        <div className="divider" />
+        <Credits />
+      </div>
       <div className="divider" />
       <Donate />
     </div>

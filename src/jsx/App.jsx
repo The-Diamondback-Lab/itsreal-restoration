@@ -8,7 +8,7 @@ import {
 import Home from "./pages/Home";
 import Article from './pages/Article';
 
-import { tocData } from '../constants';
+import { tocData, authorLinks } from '../constants';
 import LoadingLogo from "./components/LoadingLogo";
 import BasePage from "./pages/BasePage";
 
@@ -17,7 +17,8 @@ export default function App() {
   let articleRoutes = tocData.map((data, i) => {
     let pageProps = {
       ...data,
-      pageNumber: i
+      pageNumber: i,
+      authorLinks
     };
 
     if (i > 0) pageProps.prevPagePath = tocData[i-1].path;

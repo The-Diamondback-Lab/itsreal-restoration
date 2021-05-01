@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
  * @param {ArticleContentPropTypes} props
  */
 export default function ArticleContent(props) {
-  let authorAnchors = props.authors.map((author, i) =>
-    `<a href="https://TODO.com">${author}</a>`
-  ).join(' & ');
+  let authorAnchors = props.authors.map((author) => {
+    let authorLink = props.authorLinks[author.toLowerCase()];
+    return `<a href="https://dbknews.com/author/${authorLink}">${author}</a>`
+  }).join(' & ');
   let authorContainer = <span dangerouslySetInnerHTML={{__html: authorAnchors}}></span>
 
   return (
@@ -27,4 +28,5 @@ ArticleContent.propTypes = {
  * @prop {string} title
  * @prop {string} content
  * @prop {string[]} authors
+ * @prop {Object.<string, string>} authorLinks
  */

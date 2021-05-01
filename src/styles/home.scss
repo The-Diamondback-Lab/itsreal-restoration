@@ -233,6 +233,9 @@ $parts: 1, 2, 3, 4, 5, 6, 7;
 @each $partNum in $parts {
   .full-bg.part#{$partNum}-bg {
     background-image: url("/assets/part#{$partNum}-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &.active {
       width: 100%;

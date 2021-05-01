@@ -16,6 +16,7 @@
 #page-container {
   color: rgb(68, 68, 68);
   width: 95%;
+  max-width: 1400px;
   margin: auto;
 
   @include article-container;

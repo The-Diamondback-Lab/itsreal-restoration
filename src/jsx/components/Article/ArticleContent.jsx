@@ -15,8 +15,8 @@ export default function ArticleContent(props) {
   return (
     <div id="article-container">
       <h1>{props.title}</h1>
-        <p className="byline">By {authorContainer} </p>
-        <InnerHTML html={props.content || ''} />
+      <p className="byline">By {authorContainer} </p>
+      <InnerHTML html={props.content || ''} />
     </div>
   )
 }

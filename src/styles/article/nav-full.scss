@@ -39,6 +39,15 @@
     // On mobile and tablet screens, sticky page navigation doesn't show
     display: none;
   }
+
+  a {
+    transition: all 250ms;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+    &:hover {
+      border-color: white;
+    }
+  }
 }
 
 @media screen and (min-width: $laptop-width) {

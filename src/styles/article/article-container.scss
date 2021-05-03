@@ -1,5 +1,8 @@
 @mixin article-container {
   #article-container {
+    position: relative;
+    top: -$navHeight;
+
     h1 {
       width: 100%;
       text-align: center;

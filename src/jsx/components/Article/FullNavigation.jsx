@@ -5,14 +5,10 @@ export default function FullNavigation(props) {
     return <a key={`page-${i}`} href={'/' + toc.path}>{toc.numeral}</a>
   });
 
-  console.log(props.articleTitleInView);
-
-  if (props.articleTitleInView) {
-    return null;
-  }
+  let opacity = props.articleTitleInView ? 0 : 1;
 
   return (
-    <div className="nav-full">
+    <div style={{opacity}} className="nav-full">
       <div className="title"><a href="/">'It's Real'</a></div>
       <div className="pages">
         <div>{pageAnchors}</div>

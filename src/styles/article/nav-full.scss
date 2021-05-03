@@ -1,8 +1,12 @@
 .nav-full {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 1em;
+
+  height: $navHeight;
+
+  transition: opacity 250ms ease-in-out;
 
   color: white;
   font-size: 2em;
@@ -25,12 +29,10 @@
     align-items: center;
   }
 
-
   .title {
     background-image: url('/assets/watercolor-short-bg.png');
 
     width: 200px;
-    height: 55px;
   }
 
   .pages {
@@ -49,7 +51,6 @@
     background-image: url('/assets/watercolor-long-bg.png');
 
     width: 550px;
-    height: 55px;
 
     div {
       display: flex;

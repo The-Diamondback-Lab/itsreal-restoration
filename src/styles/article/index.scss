@@ -38,6 +38,9 @@
   max-width: 1400px;
   margin: auto;
 
+  position: relative;
+  top: -$navHeight;
+
   @include article-container;
   @include nav-short;
 }

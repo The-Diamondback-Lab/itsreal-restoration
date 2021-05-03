@@ -1,8 +1,7 @@
 import { tocData } from '../../../constants';
 
-export default function FullNavigation() {
-  let pageAnchors = tocData.map(toc => {
-    return <a href={"/" + toc.path}>{toc.numeral}</a>
+  let pageAnchors = tocData.map((toc, i) => {
+    return <a key={`page-${i}`} href={'/' + toc.path}>{toc.numeral}</a>
   });
 
   return (

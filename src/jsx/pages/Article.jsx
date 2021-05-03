@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import ArticleContent from '../components/Article/ArticleContent';
 import ShortNavigation from '../components/Article/ShortNavigation';
+import FullNavigation from '../components/Article/FullNavigation';
 import Footer from '../components/Footer';
 
 /**
@@ -43,6 +44,7 @@ export default class Article extends React.Component {
 
     return (
       <React.Fragment>
+        <FullNavigation />
         <div className="article-cover">
           <img src={imgCoverMobilePath} />
           <div></div>

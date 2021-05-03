@@ -1,0 +1,64 @@
+.nav-full {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  color: white;
+  font-size: 2em;
+  font-family: 'Playfair Display SC';
+  font-weight: bold;
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  * {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  .title {
+    background-image: url('/assets/watercolor-short-bg.png');
+
+    width: 200px;
+    height: 55px;
+  }
+
+  .pages {
+    // On mobile and tablet screens, sticky page navigation doesn't show
+    display: none;
+  }
+}
+
+@media screen and (min-width: $laptop-width) {
+  .nav-full {
+    justify-content: space-between;
+  }
+
+  .nav-full .pages {
+    display: flex;
+    background-image: url('/assets/watercolor-long-bg.png');
+
+    width: 550px;
+    height: 55px;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      a {
+        margin: 1em;
+      }
+    }
+  }
+}

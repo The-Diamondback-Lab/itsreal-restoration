@@ -27,8 +27,15 @@ export default class Article extends React.Component {
         .map(x => `<p>${x}</p>`)
         .join('');
 
+      let timelineData = null;
+      if (this.props.timelinePath) {
+        resp = await axios.get(this.props.timelinePath);
+        timelineData = resp.data;
+      }
+
       this.setState({
-        content
+        content,
+        timelineData
       });
       this.props.onReady();
     } catch (err) {
@@ -37,8 +44,9 @@ export default class Article extends React.Component {
   }
 
   render() {
-    const { path, pageNumber, prevPagePath, nextPagePath, authors, authorLinks } = this.props;
-    const { content } = this.state;
+    const { path, pageNumber, prevPagePath, nextPagePath, authors,
+      authorLinks } = this.props;
+    const { content, timelineData } = this.state;
 
     let title = path.split('-').join(' ');
     let imgCoverMobilePath = `/assets/part${pageNumber+1}-cover-mobile.jpg`;
@@ -57,9 +65,10 @@ export default class Article extends React.Component {
                 <ArticleContent
                   observerRef={ref}
                   title={title}
-                  content={content}
                   authors={authors}
-                  authorLinks={authorLinks} />
+                  authorLinks={authorLinks}
+                  content={content}
+                  timelineData={timelineData} />
                 <ShortNavigation
                   pageNumber={pageNumber}
                   prevPagePath={prevPagePath}
@@ -79,7 +88,7 @@ Article.propTypes = {
   onReady: PropTypes.func.isRequired,
   path: PropTypes.string.isRequired,
   pageNumber: PropTypes.number.isRequired,
-  hasTimeline: PropTypes.bool,
+  timelinePath: PropTypes.string,
   prevPagePath: PropTypes.string,
   nextPagePath: PropTypes.string
 }
@@ -89,7 +98,7 @@ Article.propTypes = {
  * @prop {() => void} onReady
  * @prop {string} path
  * @prop {number} pageNumber
- * @prop {boolean} [hasTimeline]
+ * @prop {string} [timelinePath]
  * @prop {string} [prevPagePath]
  * @prop {string} [nextPagePath]
  */

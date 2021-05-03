@@ -65,13 +65,44 @@
         margin: 0 auto;
       }
     }
+
+    .main-content {
+      display: flex;
+      flex-direction: row;
+
+      .timeline {
+        display: none;
+      }
+
+      .timeline-event {
+        font-size: 0.75em;
+        padding: 3em 0;
+        padding-right: 1.5em;
+        text-align: center;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .timeline-bar {
+        width: 2px;
+        background-color: black;
+      }
+    }
   }
 }
 
 @media screen and (min-width: $laptop-width) {
-  #article-container {
+  #page-container #article-container {
     h1 {
       font-size: 5em;
+    }
+
+    .main-content .timeline {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
     }
   }
 

@@ -15,7 +15,7 @@ export default function ArticleContent(props) {
   return (
     <div id="article-container">
       <h1 ref={props.observerRef}>{props.title}</h1>
-      <p className="byline">By {authorContainer} </p>
+      <p className="byline">By {authorContainer}</p>
       <InnerHTML html={props.content || ''} />
     </div>
   )

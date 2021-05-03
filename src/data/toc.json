@@ -5,7 +5,7 @@
     "authors": ["Hallie Miller", "Ellie Silverman"],
     "blurb": "The university aims to resolve sexual misconduct cases in 60 business days, yet one student’s case dragged on for 152 business days.",
     "navBlurb": "One student's sexual misconduct case took 152 business days to resolve",
-    "hasTimeline": true
+    "timelinePath": "/data/part1-timeline.json"
   },
   {
     "numeral": "II.",

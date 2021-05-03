@@ -65,6 +65,21 @@
         margin: 0 auto;
       }
     }
+
+    .main-content {
+      display: flex;
+      flex-direction: row;
+
+      .timeline-event {
+        font-size: 0.75em;
+        padding-right: 1.5em;
+        text-align: center;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
   }
 }
 

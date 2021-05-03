@@ -8,7 +8,7 @@
       text-align: center;
 
       font-family: 'Playfair Display SC', serif;
-      font-size: 5em;
+      font-size: 3.8em;
 
       text-transform: uppercase;
     }
@@ -72,6 +72,12 @@
 }
 
 @media screen and (min-width: $laptop-width) {
+  #article-container {
+    h1 {
+      font-size: 5em;
+    }
+  }
+
   .wrap {
     max-width: 500px;
     margin: 0.5em 1em !important;

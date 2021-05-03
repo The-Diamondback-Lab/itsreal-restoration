@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+ - 10.17.0
+branches: # Specifies which branches the Travis CI/CD pipeline will run on
+  only: # Specifies that it should ONLY run on the following branches
+  - master
+before_deploy: # Shell commands to execute BEFORE entering the deployment phase
+  - npm run build
+deploy:
+  provider: s3 # Internally tells Travis what script to use, fortunately we don't need to worry about
+               # that script). At a high level, the script will just upload files to an S3 bucket.
+  access_key_id: ${AWS_ACCESS_KEY_ID} # Environment variable that specifies the AWS access key (provides access to the AWS API)
+  secret_access_key: ${AWS_SECRET_ACCESS_KEY} # Environment variable that specifies the AWS secret key (for access to the AWS API)
+  bucket: itsreal.dbknews.com # Which bucket to deploy to. Deployment will fail if the bucket does not exist
+  acl: public_read # Indicates how files in the bucket can be accessed. In this case, they can be publicly read
+  local_dir: build # Which directory to upload
+  skip_cleanup: true # Skips cleaning up build files. This is really important! If Travis cleans up our build files, then nothing
+                     # gets uploaded to our bucket! Which means no static site!
+  on: # Which branch the deployment script should run on
+    branch: master
+after_deploy: # Shell commands to execute AFTER the deployment phase
+  - echo "Static site deployed"

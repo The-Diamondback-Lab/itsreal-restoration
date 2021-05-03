@@ -33,7 +33,6 @@ export default function App() {
     return (
       <Router exact path={'/' + data.path} key={`route-part-${i+1}`}>
         <Helmet>
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
           <script src="https://highcharts.github.io/pattern-fill/pattern-fill.js"></script>
         </Helmet>
         {basePage}

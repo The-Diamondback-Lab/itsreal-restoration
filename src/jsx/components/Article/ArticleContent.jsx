@@ -22,7 +22,13 @@ export default function ArticleContent(props) {
 }
 
 ArticleContent.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
+  authors: PropTypes.arrayOf(PropTypes.string),
+  authorLinks: PropTypes.objectOf(PropTypes.string),
+  observerRef: PropTypes.oneOf([
+    PropTypes.func
+  ])
 }
 
 /**
@@ -31,4 +37,5 @@ ArticleContent.propTypes = {
  * @prop {string} content
  * @prop {string[]} authors
  * @prop {Object.<string, string>} authorLinks
+ * @prop {React.RefObject<any> | ((node?: Element) => void)} observerRef
  */

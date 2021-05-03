@@ -1,5 +1,8 @@
 import { tocData } from '../../../constants';
 
+/**
+ * @param {FullNavigationProps} props
+ */
 export default function FullNavigation(props) {
   let pageAnchors = tocData.map((toc, i) => {
     return <a key={`page-${i}`} href={'/' + toc.path}>{toc.numeral}</a>
@@ -16,3 +19,8 @@ export default function FullNavigation(props) {
     </div>
   );
 }
+
+/**
+ * @typedef FullNavigationProps
+ * @prop {boolean} articleTitleInView
+ */

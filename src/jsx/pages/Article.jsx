@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import { InView } from 'react-intersection-observer';
 
 import ArticleContent from '../components/Article/ArticleContent';
 import ShortNavigation from '../components/Article/ShortNavigation';
@@ -44,24 +45,31 @@ export default class Article extends React.Component {
 
     return (
       <React.Fragment>
-        <FullNavigation />
         <div className="article-cover">
           <img src={imgCoverMobilePath} />
           <div></div>
         </div>
-        <div id="page-container">
-          <ArticleContent
-            title={title}
-            content={content}
-            authors={authors}
-            authorLinks={authorLinks} />
-          <ShortNavigation
-            pageNumber={pageNumber}
-            prevPagePath={prevPagePath}
-            nextPagePath={nextPagePath} />
-          <div className="divider" />
-          <Footer />
-        </div>
+        <InView>
+          {({inView, ref}) => (
+            <React.Fragment>
+              <FullNavigation articleTitleInView={inView}/>
+              <div id="page-container">
+                <ArticleContent
+                  observerRef={ref}
+                  title={title}
+                  content={content}
+                  authors={authors}
+                  authorLinks={authorLinks} />
+                <ShortNavigation
+                  pageNumber={pageNumber}
+                  prevPagePath={prevPagePath}
+                  nextPagePath={nextPagePath} />
+                <div className="divider" />
+                <Footer />
+              </div>
+            </React.Fragment>
+          )}
+        </InView>
       </React.Fragment>
     );
   }

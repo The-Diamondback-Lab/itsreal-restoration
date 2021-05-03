@@ -54,6 +54,14 @@ $whiteBackgroundUrl: "/assets/watercolor-white-bg.png";
     font-family: 'Lora', serif;
     font-size: 2em;
     line-height: 1.5em;
+
+    &.desktop {
+      display: none;
+    }
+
+    &.mobile {
+      display: initial;
+    }
   }
 
   #navigation-elems {
@@ -177,6 +185,14 @@ $whiteBackgroundUrl: "/assets/watercolor-white-bg.png";
 
       &.smaller {
         font-size: 1.8em;
+      }
+
+      &.desktop {
+        display: initial;
+      }
+
+      &.mobile {
+        display: none;
       }
     }
 

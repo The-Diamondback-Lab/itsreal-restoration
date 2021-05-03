@@ -30,14 +30,9 @@ export default class Home extends React.Component {
   }
 
   componentDidMount() {
-    // Only call the ready hook if it's present
-    if (this.props.onReady) {
-      // This timeout mimics as if the home page was doing some asynchronous
-      // work (i.e. network requests)
-      setTimeout(() => {
-        this.props.onReady();
-      }, 0);
-    }
+    // Don't have any special async tasks to do here, so immediately send
+    // ready signal
+    this.props.onReady();
   }
 
   /**
@@ -113,7 +108,8 @@ export default class Home extends React.Component {
                 alt="&quot;It's Real&quot; Banner"></img>
 
               <h1 className={headerClass}>{this.state.header}</h1>
-              <p className={blurbClass}>{this.state.blurb}</p>
+              <p className={blurbClass + ' desktop'}>{this.state.blurb}</p>
+              <p className={blurbClass + ' mobile'}>{blurbs.DEFAULT}</p>
 
               <HomeNavigation
                 onHover={this.onAnchorHover}

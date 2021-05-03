@@ -15,10 +15,15 @@ export default function ArticleContent(props) {
   let timelineContent = null;
   if (props.timelineData) {
     let timelineEvents = props.timelineData.map((x, i) => (
-      <div key={`timeline-event-${i}`} className="timeline-event" style={{marginTop: x.marginOffset}}>
-        <p><b>{x.date}</b></p>
-        <p>{x.text}</p>
-      </div>
+      <>
+        <div className="timeline-bar" style={{height:x.marginOffset}}></div>
+        <div
+          key={`timeline-event-${i}`}
+          className="timeline-event" >
+          <p><b>{x.date}</b></p>
+          <p>{x.text}</p>
+        </div>
+      </>
     ));
 
     timelineContent = <div className="timeline">{timelineEvents}</div>

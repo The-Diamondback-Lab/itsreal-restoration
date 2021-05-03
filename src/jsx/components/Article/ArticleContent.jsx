@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+import InnerHTML from 'dangerously-set-html-content';
+
 /**
  * @param {ArticleContentPropTypes} props
  */
@@ -14,7 +16,7 @@ export default function ArticleContent(props) {
     <div id="article-container">
       <h1>{props.title}</h1>
         <p className="byline">By {authorContainer} </p>
-        <div dangerouslySetInnerHTML={{__html: props.content || ''}} />
+        <InnerHTML html={props.content || ''} />
     </div>
   )
 }

@@ -40,3 +40,11 @@
   @include article-container;
   @include nav-short;
 }
+
+.highchart {
+  background: url(https://s3.amazonaws.com/wapopartners.com/dbknews-wp/wp-content/uploads/2017/05/09213012/Background.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+}

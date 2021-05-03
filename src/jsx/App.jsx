@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 import Home from "./pages/Home";
 import Article from './pages/Article';
@@ -24,12 +25,17 @@ export default function App() {
     if (i > 0) pageProps.prevPagePath = tocData[i-1].path;
     if (i < tocData.length - 1) pageProps.nextPagePath = tocData[i+1].path;
 
-    let basePage = (<BasePage
-      pageComponent={Article}
-      pageProps={pageProps} />);
+    let basePage = (
+      <BasePage
+        pageComponent={Article}
+        pageProps={pageProps} />);
 
     return (
       <Router exact path={'/' + data.path} key={`route-part-${i+1}`}>
+        <Helmet>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="https://highcharts.github.io/pattern-fill/pattern-fill.js"></script>
+        </Helmet>
         {basePage}
       </Router>
     );

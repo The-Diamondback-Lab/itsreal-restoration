@@ -16,7 +16,7 @@ export default function ArticleContent(props) {
   if (props.timelineData) {
     let timelineEvents = props.timelineData.map((x, i) => (
       <>
-        <div className="timeline-bar" style={{height:x.marginOffset}}></div>
+        <div className="timeline-bar" style={{height: x.offset}}></div>
         <div
           key={`timeline-event-${i}`}
           className="timeline-event" >
@@ -51,5 +51,5 @@ ArticleContent.propTypes = {
  * @prop {string[]} authors
  * @prop {Object.<string, string>} authorLinks
  * @prop {string} content
- * @prop {{date: string, text: string, marginOffset: number}[]} [timelineData]
+ * @prop {{date: string, text: string, offset: number}[]} [timelineData]
  */

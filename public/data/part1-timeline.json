@@ -2,36 +2,36 @@
   {
     "date": "August 27, 2015",
     "text": "Alleged sexual assault occurs",
-    "marginOffset": 250
+    "offset": 250
   },
   {
     "date": "November 23, 2015",
     "text": "Blair reports the alleged assault to the Office of Civil Rights and Sexual Misconduct (Title IX)",
-    "marginOffset": 200
+    "offset": 200
   },
   {
     "date": "February 19, 2016",
     "text": "The Title IX office completes its draft investigation report and allows both parties to review it during a 5-day period.",
-    "marginOffset": 4300
+    "offset": 4300
   },
   {
     "date": "March 9, 2016",
     "text": "This marks 60 business days. If the university met its time goal time frame, Blair’s case would be resolved.",
-    "marginOffset": 2750
+    "offset": 2750
   },
   {
     "date": "April 4, 2016",
     "text": "The Title IX office’s final investigation report finds Blair’s alleged attacker responsible for Sexual Assault I and II.",
-    "marginOffset": 325
+    "offset": 325
   },
   {
     "date": "April 29, 2016",
     "text": "The Standing Review Committee agrees he is responsible for Sexual Assault I and II.",
-    "marginOffset": 1025
+    "offset": 1025
   },
   {
     "date": "July 7, 2016",
     "text": "Student Conduct Directory Andrea Goodwin notifies Blair that her alleged attacker is suspended.",
-    "marginOffset": 800
+    "offset": 800
   }
 ]

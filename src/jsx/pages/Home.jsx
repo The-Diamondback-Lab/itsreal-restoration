@@ -7,6 +7,7 @@ import mobileBanner from '../../assets/mobile-banner.png';
 import specialProjectBanner from '../../assets/special-project-logo-black.png';
 import { headers, blurbs } from '../../constants.js';
 import HomeBackgrounds from '../components/Home/HomeBackgrounds';
+import { Helmet } from 'react-helmet';
 
 /**
  * @extends React.Component<HomePropTypes>
@@ -93,6 +94,9 @@ export default class Home extends React.Component {
 
     return (
       <React.Fragment>
+        <Helmet>
+          <title>'It's Real' | The Diamondback</title>
+        </Helmet>
         <HomeBackgrounds selectedBackground={this.state.selectedBackground}/>
         <div id="home-root" className={containerClass}>
           <div id="home-container" className={containerClass}>

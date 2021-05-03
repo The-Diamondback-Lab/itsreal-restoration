@@ -25,6 +25,11 @@ export default function App() {
     if (i > 0) pageProps.prevPagePath = tocData[i-1].path;
     if (i < tocData.length - 1) pageProps.nextPagePath = tocData[i+1].path;
 
+    let title = data.path
+      .split('-')
+      .map(s => s[0].toUpperCase() + s.substring(1))
+      .join(' ');
+
     let basePage = (
       <BasePage
         pageComponent={Article}
@@ -33,6 +38,7 @@ export default function App() {
     return (
       <Router exact path={'/' + data.path} key={`route-part-${i+1}`}>
         <Helmet>
+          <title>'It's Real' | {title}</title>
           <script src="https://highcharts.github.io/pattern-fill/pattern-fill.js"></script>
         </Helmet>
         {basePage}

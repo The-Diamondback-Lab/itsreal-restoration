@@ -51,14 +51,14 @@
     }
 
     a:nth-child(1) {
-      justify-content: start;
+      justify-content: flex-start;
 
       svg {
         margin-right: 2em;
       }
 
       div {
-        justify-items: start;
+        justify-items: flex-start;
 
         * {
           text-align: start;
@@ -67,14 +67,14 @@
     }
 
     a:nth-child(2) {
-      justify-content: end;
+      justify-content: flex-end;
 
       svg {
         margin-left: 2em;
       }
 
       div {
-        justify-items: end;
+        justify-items: flex-end;
 
         * {
           text-align: end;

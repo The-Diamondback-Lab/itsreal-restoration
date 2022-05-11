@@ -5,8 +5,8 @@ Generates a list of headers and blurbs for the home page
 import tocData from './data/toc.json';
 import authorLinks from './data/author-links.json';
 
-const DEFAULT_HEADER = "‘It’s real’";
-const DEFAULT_BLURB = "A seven-part look at how sexual assault is handled at the University of Maryland.";
+const DEFAULT_HEADER = "Unequal";
+const DEFAULT_BLURB = "A seven-part look at the history of segregation on campus.";
 
 /**
  * @type {Object<string, string>}

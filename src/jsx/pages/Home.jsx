@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import HomeNavigation from '../components/Home/HomeNavigation';
 
 import mobileBanner from '../../assets/mobile-banner.png';
+import mainBanner from '../../assets/main-bg.png';
 import specialProjectBanner from '../../assets/special-project-logo-black.png';
 import { headers, blurbs } from '../../constants.js';
 import HomeBackgrounds from '../components/Home/HomeBackgrounds';
@@ -95,11 +96,15 @@ export default class Home extends React.Component {
     return (
       <React.Fragment>
         <Helmet>
-          <title>'It's Real' | The Diamondback</title>
+          <title>Unequal | The Diamondback</title>
         </Helmet>
+        {/* <img className="main-banner"src={mainBanner} alt="&quot;Unequal&quot; Banner"></img> */}
         <HomeBackgrounds selectedBackground={this.state.selectedBackground}/>
+        
         <div id="home-root" className={containerClass}>
+        <img className="main-banner"src={mainBanner} alt="&quot;Unequal&quot; Banner"></img>
           <div id="home-container" className={containerClass}>
+          
             {containerBackgroundDivs}
 
             <img className={bannerClass}
@@ -107,9 +112,8 @@ export default class Home extends React.Component {
               alt="Special Project Logo"></img>
 
             <div id="home-content">
-              <img className="mobile-banner"
-                src={mobileBanner}
-                alt="&quot;It's Real&quot; Banner"></img>
+            
+              <img className="mobile-banner"src={mobileBanner} alt="&quot;Unequal&quot; Banner"></img>
 
               <h1 className={headerClass}>{this.state.header}</h1>
               <p className={blurbClass + ' desktop'}>{this.state.blurb}</p>
@@ -119,6 +123,7 @@ export default class Home extends React.Component {
                 onHover={this.onAnchorHover}
                 onUnhover={this.onAnchorUnhover}/>
             </div>
+            
           </div>
         </div>
       </React.Fragment>

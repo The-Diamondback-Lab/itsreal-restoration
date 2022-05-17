@@ -10,7 +10,7 @@
 
   color: white;
   font-size: 2em;
-  font-family: 'Playfair Display SC';
+  font-family: 'solano-gothic-bd';
   font-weight: bold;
   text-transform: uppercase;
 
@@ -59,11 +59,11 @@
     display: flex;
     background-image: url('/assets/watercolor-long-bg.png');
 
-    width: 550px;
+    height: 550px;
 
     div {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-around;
 
       a {

@@ -2,9 +2,9 @@ export default function About() {
   return (
     <div className="about">
       <h1>About the Project</h1>
-      <p>To report this series, The Diamondback spent four months interviewing more than 100 people. Reporters used documents and interviews to examine the departments tasked with investigating sexual misconduct cases, the mental health resources available to those who experienced trauma and the educational initiatives in place to eradicate sexual assault.</p>
-      <p>Reporters were determined to find out what circumstances compelled students to file cases with the U.S. Department of Education against this university for possible violations of Title IX, a federal anti-discrimination law.</p>
-      <p className="notice">If you’ve been affected by sexual assault and want to share your story, please contact The Diamondback at <a href="mailto:dbkinvestigations@gmail.com">dbkinvestigations@gmail.com</a></p>
+      <p>The Diamondback spent two semesters looking into collections from the University Archives, court decisions, digititzed issues of this publication, university reports and federal legislation. We talked to former Black student leaders and athletes, former university presidents and Black workers.</p>
+      <p>There are still parts of this university's history that didn’t make it into this project. But we hope to provide a starting place for those who want to know about the desegregation efforts at this university. We also recommend the ongoing “Black Experience” project, as part of the “Reparative Oral Histories” university libraries initiative, that is documenting Black life on this campus.</p>
+      <p>We want to acknowledge Hayward “Woody” Farrar, who was the Black Student Union president in 1970. We wouldn’t have known nearly as much about the early years of the Black Student Union without his account, which we have used in our reporting.</p>
     </div>
   );
 }

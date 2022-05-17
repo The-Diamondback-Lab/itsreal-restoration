@@ -7,37 +7,37 @@
   {
     "date": "1858",
     "text": "Charles Calvert sold the Rossburg farm",
-    "offset": 160
+    "offset": 150
   },
   {
     "date": "1859, October",
     "text": "Opening of Maryland Agricultural College",
-    "offset": 160
+    "offset": 150
   },
   {
     "date": "1935",
     "text": "Harry Clifton “Curley” Byrd becomes university president",
-    "offset": 160
+    "offset": 150
   },
   {
     "date": "1947",
     "text": "Byrd argues against integration in state legislature meeting",
-    "offset": 190
+    "offset": 1400
   },
   {
     "date": "1948",
     "text": "First Black students — Rose Shockley Wiseman, Myrtle Holmes Wake and John Francis — complete their coursework outside of the campus",
-    "offset": 800
+    "offset": 750
   },
   {
     "date": "1949",
     "text": "The NAACP sues the university to accept Parren J. Mitchell, Esther McCready and Hiram Whittle",
-    "offset": 200
+    "offset": 100
   },
   {
     "date": "1950",
     "text": "Parren J. Mitchell was accepted to this university",
-    "offset": 200
+    "offset": 100
   },
   {
     "date": "1951",
@@ -47,47 +47,47 @@
   {
     "date": "May 4, 1954",
     "text": "Wilson H. Elkins announced as next university president",
-    "offset": 350
+    "offset": 1000
   },
   {
     "date": "May 17 1954",
     "text": "Brown v. Board of Education landmark decision",
-    "offset": 30
+    "offset": 20
   },
   {
     "date": "1954",
-    "text": "Board of regents decide to only accept in-state Black students",
-    "offset": 30
+    "text": "Board of Regents decide to only accept in-state Black students",
+    "offset": 20
   },
   {
     "date": "March 1955",
     "text": "Black students ousted from course",
-    "offset": 30
+    "offset": 20
   },
   {
     "date": "Fall 1955",
     "text": "Elaine Johnson Coates, first Black woman to graduate from this university, enrolls",
-    "offset": 30
+    "offset": 20
   },
   {
     "date": "1962",
-    "text": "Darryll Hill, first Black football player, enrolls",
-    "offset": 30
+    "text": "Darryl Hill, first Black football player, enrolls",
+    "offset": 20
   },
   {
     "date": "1964",
-    "text": "Civil Rights Act",
-    "offset": 30
+    "text": "Civil Rights Act passes",
+    "offset": 20
   },
   {
     "date": "1965",
     "text": "Billy Jones, first Black basketball player, enrolls",
-    "offset": 30
+    "offset": 20
   },
   {
     "date": "1965",
-    "text": "M. Lucia James, First Black professor of the university",
-    "offset": 30
+    "text": "M. Lucia James, first Black professor at the university",
+    "offset": 20
   },
   {
     "date": "1966",
@@ -96,42 +96,37 @@
   },
   {
     "date": "April 1968",
-    "text": "Dr. Martin Luther King, Jr., is assassinated",
-    "offset": 30
+    "text": "Dr. Martin Luther King Jr. is assassinated",
+    "offset": 1100
   },
   {
     "date": "May 1968",
     "text": "CORE becomes BSU",
-    "offset": 30
+    "offset": 900
   },
   {
     "date": "March 1969",
-    "text": "Maryland charged with violation of Civil Rights Act of 1964",
-    "offset": 30
+    "text": "UMD charged with violation of Civil Rights Act of 1964",
+    "offset": 350
   },
   {
     "date": "Fall 1969",
     "text": "African American studies department opens at this university",
-    "offset": 30
+    "offset": 1750
   },
   {
     "date": "1974",
-    "text": "Maryland passes desegregation plan in higher education",
-    "offset": 30
+    "text": "UMD passes desegregation plan in higher education",
+    "offset": 1000
   },
   {
     "date": "1978",
-    "text": "Banneker-Key scholarship is established",
-    "offset": 30
+    "text": "Banneker/Key scholarship is established",
+    "offset": 300
   },
   {
     "date": "1981",
     "text": "John B. Slaughter, first Black chancellor of UMD, begins his term",
-    "offset": 30
-  },
-  {
-    "date": "date",
-    "text": "text",
-    "offset": 30
+    "offset": 600
   }
 ]

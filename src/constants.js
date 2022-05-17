@@ -6,7 +6,7 @@ import tocData from './data/toc.json';
 import authorLinks from './data/author-links.json';
 
 const DEFAULT_HEADER = "Unequal";
-const DEFAULT_BLURB = "A seven-part look at the history of segregation on campus.";
+const DEFAULT_BLURB = "A seven-part look at the history of segregation on the University of Maryland's campus";
 
 /**
  * @type {Object<string, string>}

@@ -4,7 +4,7 @@
       width: 100%;
       text-align: center;
 
-      font-family: 'Playfair Display SC', serif;
+      font-family: 'solano-gothic-bd', serif;
       font-size: 3.8em;
 
       text-transform: uppercase;
@@ -12,7 +12,7 @@
 
     h4 {
       font-size: 3em;
-      font-family: 'Playfair Display', serif;
+      font-family: 'solano-gothic-bd', serif;
 
       text-align: center;
 
@@ -24,8 +24,10 @@
     p {
       margin: 1em 0;
       font-size: 1.8em;
-      font-family: 'Lora', serif;
+      font-family: 'solano-gothic-lt', serif;
       line-height: 1.85em;
+      padding-left: 7%;
+      padding-right: 7%;
 
       &.byline {
         margin: 1em auto;
@@ -33,10 +35,20 @@
         font-size: 2.35em;
         text-align: center;
 
-        font-family: 'Playfair Display', serif;
+        font-family: 'solano-gothic-lt', serif;
       }
     }
 
+    photocap {
+      font-size: .9em;
+      color: black;
+      font-style: italic;
+      justify-content: center;
+      text-align: center;
+      padding-left: 25%;
+      padding-right: 25%;
+    }
+      
     a {
       text-decoration: underline;
 
@@ -49,8 +61,16 @@
     }
 
     video, img {
-      width: 100%;
+      width: 50%;
+      padding-left: 25%;
+      padding-right: 25%;
       object-fit: contain;
+      align-items: center;
+      justify-self: center;
+      justify-content: center;
+      align-self: center;
+      align-content: center;
+      justify-items: center;
 
       + .caption {
         font-size: 1.3em;

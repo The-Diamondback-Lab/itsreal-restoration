@@ -1,59 +1,52 @@
 [
   {
     "numeral": "I.",
-    "path": "unequal",
+    "path": "a-brief-history",
     "authors": ["Clara Longo de Freitas"],
-    "blurb": "1856 - 1978",
-    "navBlurb": "One student's sexual misconduct case took 152 business days to resolve",
+    "blurb": "From the university’s founding in 1856 to the 1995 Podberesky v. Kirwan case",
+    "navBlurb": "From the university’s founding in 1856 to the 1995 Podberesky v. Kirwan case",
     "timelinePath": "/data/part1-timeline.json"
   },
   {
     "numeral": "II.",
-    "path": "divest",
+    "path": "“Silence Is Complicity”",
     "authors": ["Clara Longo de Freitas"],
-    "blurb": "1986",
-    "navBlurb": "1986"
-  },
-  {
-    "numeral": "II.",
-    "path": "podberesky",
-    "authors": ["Clara Longo de Freitas"],
-    "blurb": "1993",
-    "navBlurb": "1993"
+    "blurb": "How the anti-apartheid movement played out at this university",
+    "navBlurb": "How the anti-apartheid movement played out at this university"
   },
   {
     "numeral": "III.",
-    "path": "student-activism",
+    "path": "before-banneker/key",
     "authors": ["Clara Longo de Freitas"],
-    "blurb": "1950-60",
-    "navBlurb": "1950-60"
+    "blurb": "The scholarship for Black students that was forced to end",
+    "navBlurb": "The scholarship for Black students that was forced to end"
   },
   {
     "numeral": "IV.",
-    "path": "sports",
-    "authors": ["Clara Longo de Freitas"],
-    "blurb": "1950s",
-    "navBlurb": "1950s"
+    "path": "trailblazers",
+    "authors": ["Yonathan Shimilis", "Clara Longo de Freitas"],
+    "blurb": "Black athletes often broke barriers in a campus that did not welcome them.",
+    "navBlurb": "Black athletes often broke barriers in a campus that did not welcome them."
   },
   {
     "numeral": "V.",
-    "path": "the-arts",
-    "authors": ["Yonathan Shimilis", "Clara Longo de Freitas"],
-    "blurb": "1960s",
-    "navBlurb": "1960s"
+    "path": "black-workers",
+    "authors": ["James Cirrone"],
+    "blurb": "They have been at this university for more than 150 years. Many still report unequal treatment.",
+    "navBlurb": "They have been at this university for more than 150 years. Many still report unequal treatment."
   },
   {
     "numeral": "VI.",
-    "path": "black-workers",
-    "authors": ["James Cirrone"],
-    "blurb": "A brief history of Black students and workers at the University of Maryland.",
-    "navBlurb": "A brief history of Black students and workers at the University of Maryland."
+    "path": "football-to-theater-star",
+    "authors": ["Clara Longo de Freitas"],
+    "blurb": "Kene Holliday opened the doors to theater for other Black students.",
+    "navBlurb": "Kene Holliday opened the doors to theater for other Black students."
   },
   {
     "numeral": "VII.",
-    "path": "looking-back",
-    "authors": ["Clara Longo de Frietas"],
-    "blurb": "An editors' note.",
-    "navBlurb": "An editors' note"
+    "path": "demanding-equality",
+    "authors": ["Clara Longo de Freitas"],
+    "blurb": "Former Black student activists and their legacy on campus",
+    "navBlurb": "Former Black student activists and their legacy on campus"
   }
 ]
